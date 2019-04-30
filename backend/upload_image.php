@@ -34,10 +34,10 @@ function uploadImage($target_dir)
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 echo "<script type='text/javascript'>alert('Votre image a été téléchargé avec succès');</script>";
+                return $target_file;
             } else {
                 echo "<script type='text/javascript'>alert('Une erreur est survenu pendant le téléchargement de votre image');</script>";
             }
         }
     }
-    return $target_file;
 }
