@@ -2,7 +2,10 @@
     require 'upload_image.php';
 
     $photo = uploadImage("uploads/");
-    
+    if ($photo == null) { 
+        header('Location: ../frontend/formulaire_inscription.php');
+        exit();
+    }
     $nom = isset($_POST["nom"])? $_POST["nom"] : "";
     $prenom = isset($_POST["prenom"])? $_POST["prenom"] : "";
     $pseudo = isset($_POST["pseudo"])? $_POST["pseudo"] : "";
