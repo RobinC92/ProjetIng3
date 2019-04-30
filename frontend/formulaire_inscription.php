@@ -38,18 +38,17 @@
 				<td>Adresse:</td>
 				<td><input type="text" name="adresse" required="true"></td>
 			</tr>
-
+			<tr>
+				<td>Numéro de carte:</td>
+				<td><input type="text" pattern="" name="coord" required="true"></td>
+			</tr>
 			<tr>
 				<td>Photo de profil:</td>
 				<td><input type="file" name="fileToUpload" id="fileToUpload"></td>
 			</tr>
-			<tr>
-				<td>Coordonnées bancair
-
-			<tr>
 				<td colspan="2" align="center">
-					<input type="submit" name="button" value="Valider"></td>
-				</tr>
+				<input type="submit" name="button" value="Valider"></td>
+			</tr>
 			</table>
 		</form>
 </body>
