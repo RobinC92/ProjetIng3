@@ -7,18 +7,18 @@
 <body>
 
 	<h3>Connexion à votre compte</h3>
-	<form>
+	<form action="verification.php" method="post">
 		<table>
 			<tr>
 				<td>Pseudo:</td>	
-				<td><input type="text" name="pseudo"></td>
+				<td><input type="text" name="pseudo" required="true"></td>
 			</tr>
 			<tr>
 				<td>Mot de passe:</td>	
-				<td><input type="password" name="password"></td>
+				<td><input type="password" name="mdp" required="true"></td>
 			</tr>
 			<tr>
-				<td colspan="2" align="center"><input type="submit" name="Valider"></td>
+				<td colspan="2" align="center"><input type="submit" name="button" value="Valider"></td>
 			</tr>
 		</table>
 	</form>
