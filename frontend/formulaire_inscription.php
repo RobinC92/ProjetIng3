@@ -40,7 +40,7 @@
 			</tr>
 			<tr>
 				<td>Numéro de carte:</td>
-				<td><input type="text" pattern="" name="coord" required="true"></td>
+				<td><input type="text" maxlength="16" pattern="[0-9]{16}" placeholder="16 caractères" name="coord" required="true"></td>
 			</tr>
 			<tr>
 				<td>Photo de profil:</td>
