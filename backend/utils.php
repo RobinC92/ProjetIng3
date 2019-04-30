@@ -20,22 +20,19 @@
     if ($db_found) {
         $sql = "SELECT * FROM individu";
         if ($pseudo != "") {
-//on cherche le livre avec les paramètres titre et auteur
+//on cherche le pseudo dans la bdd
             $sql .= " WHERE Pseudo LIKE '%$pseudo%'";
-            if ($mail != "") {
-                $sql .= " OR Email LIKE '%$mail%'";
-            }
         }
         $result = mysqli_query($db_handle, $sql);
-//regarder s'il y a de résultat
+//regarder s'il y a un résultat
         $test = mysqli_num_rows($result);
         if ($test < 1) {
-//le mail ou le pseudo existent déjà dans la BDD
+// le pseudo existe déjà dans la BDD
             $sql = "INSERT INTO individu VALUES('$nom', '$prenom', '$pseudo', '$statut', '$mail', '$mdp', '$adresse','$photo')";
             $result = mysqli_query($db_handle, $sql);
-            echo "Add successful." . "<br>";
+            echo "Compte crée avec succès" . "<br>";
         }else{
-            echo "C'est mort, trouve toi un autre pseudo";
+            echo "Pseudo déjà pris";
         }
     }
 }

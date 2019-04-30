@@ -28,7 +28,7 @@
 			</tr>
 			<tr>
 				<td>Email:</td>
-				<td><input type="text" name="mail" required="true"></td>
+				<td><input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="mail" required="true"></td>
 			</tr>
 			<tr>
 				<td>Mot de passe:</td>
