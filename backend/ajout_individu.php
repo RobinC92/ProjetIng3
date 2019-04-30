@@ -1,7 +1,7 @@
 <?php    
     require 'upload_image.php';
 
-    $photo = uploadImage("uploads/");
+    $photo = uploadImage("uploads/",$_SERVER['HTTP_REFERER']);
     $nom = isset($_POST["nom"])? $_POST["nom"] : "";
     $prenom = isset($_POST["prenom"])? $_POST["prenom"] : "";
     $pseudo = isset($_POST["pseudo"])? $_POST["pseudo"] : "";

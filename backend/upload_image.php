@@ -1,7 +1,8 @@
 <?php
-function uploadImage($target_dir)
+function uploadImage($target_dir, $url)
 {
     if (!empty($_FILES)) {
+        echo $url;
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -12,23 +13,21 @@ function uploadImage($target_dir)
                 $uploadOk = 1;
             } else {
                 echo "<script type='text/javascript'>alert('Le fichier n'est pas une image);
-                window.location.href = '../frontend/formulaire_inscription';</script>";
+                window.location.href = '" . $url . "';</script>";
                 $uploadOk = 0;
             }
         }
         // Check file size
         if ($_FILES["fileToUpload"]["size"] > 500000) {
-            echo "Sorry, your file is too large.";
             echo "<script type='text/javascript'>alert('Votre Fichier est trop volumineux');
-            window.location.href = '../frontend/formulaire_inscription';</script>";
+            window.location.href = '" . $url . "';</script>";
             $uploadOk = 0;
         }
         // Allow certain file formats
         if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
             && $imageFileType != "gif") {
-            echo ".";
             echo "<script type='text/javascript'>alert('Désolé nous acceptons uniquement les formats JPG, JPEG, PNG & GIF.');
-            window.location.href = '../frontend/formulaire_inscription';</script>";
+            window.location.href = '" . $url . "';</script>";
             $uploadOk = 0;
         }
         // Check if $uploadOk is set to 0 by an error
@@ -39,7 +38,7 @@ function uploadImage($target_dir)
                 return $target_file;
             } else {
                 echo "<script type='text/javascript'>alert('Une erreur est survenu pendant le téléchargement de votre image');
-                window.location.href = '../frontend/formulaire_inscription';</script>";
+                window.location.href = '" . $url . "';</script>";
             }
         }
     }
