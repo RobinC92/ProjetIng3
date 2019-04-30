@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h2>Création d'un compte</h2>
-	<form >
+	<form>
 		<table>
 			<tr><td>Nom:</td>
 				<td><input type="text" name="nom"></td>
