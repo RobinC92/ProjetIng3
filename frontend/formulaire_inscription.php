@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Premiere connexion</title>
+	<title>ECE Amazon</title>
 </head>
 <body>
-	<h2>Création d'un compte</h2>
+	<h2>Inscription au site</h2>
 	<form action="../backend/ajout_individu" method="post" enctype="multipart/form-data">
 		<table>
 			<tr><td>Nom:</td>
@@ -38,18 +38,17 @@
 				<td>Adresse:</td>
 				<td><input type="text" name="adresse" required="true"></td>
 			</tr>
-
+			<tr>
+				<td>Numéro de carte:</td>
+				<td><input type="text" maxlength="16" pattern="[0-9]{16}" placeholder="16 caractères" name="coord" required="true"></td>
+			</tr>
 			<tr>
 				<td>Photo de profil:</td>
 				<td><input type="file" name="fileToUpload" id="fileToUpload"></td>
 			</tr>
-			<tr>
-				<td>Coordonnées bancair
-
-			<tr>
 				<td colspan="2" align="center">
-					<input type="submit" name="button" value="Valider"></td>
-				</tr>
+				<input type="submit" name="button" value="Valider"></td>
+			</tr>
 			</table>
 		</form>
 </body>
