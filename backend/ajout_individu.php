@@ -9,6 +9,7 @@
     $mail = isset($_POST["mail"])? $_POST["mail"] : "";
     $mdp = isset($_POST["mdp"])? $_POST["mdp"] : "";
     $adresse = isset($_POST["adresse"])? $_POST["adresse"] : "";
+    $coord = isset($_POST["coord"])? $_POST["coord"] : "";
 
     // identifier votre BDD
     $database = "amazon";
@@ -30,7 +31,7 @@
             $test = mysqli_num_rows($result);
             if ($test < 1) {
     // le pseudo n'existe pas dans la BDD
-                $sql = "INSERT INTO individu VALUES('$nom', '$prenom', '$pseudo', '$statut', '$mail', '$mdp', '$adresse','$photo')";
+                $sql = "INSERT INTO individu VALUES('$nom', '$prenom', '$pseudo', '$statut', '$mail', '$mdp', '$adresse','$photo','$coord')";
                 $result = mysqli_query($db_handle, $sql);
                 echo "Compte crée avec succès" . "<br>";
             }else{

@@ -43,6 +43,8 @@
 				<td>Photo de profil:</td>
 				<td><input type="file" name="fileToUpload" id="fileToUpload"></td>
 			</tr>
+			<tr>
+				<td>Coordonnées bancair
 
 			<tr>
 				<td colspan="2" align="center">
