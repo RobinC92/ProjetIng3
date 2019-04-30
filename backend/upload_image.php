@@ -11,21 +11,24 @@ function uploadImage($target_dir)
             if ($check !== false) {
                 $uploadOk = 1;
             } else {
-                echo "<script type='text/javascript'>alert('Le fichier n'est pas une image);</script>";
+                echo "<script type='text/javascript'>alert('Le fichier n'est pas une image);
+                window.location.href = '../frontend/formulaire_inscription';</script>";
                 $uploadOk = 0;
             }
         }
         // Check file size
         if ($_FILES["fileToUpload"]["size"] > 500000) {
             echo "Sorry, your file is too large.";
-            echo "<script type='text/javascript'>alert('Votre Fichier est trop volumineux');</script>";
+            echo "<script type='text/javascript'>alert('Votre Fichier est trop volumineux');
+            window.location.href = '../frontend/formulaire_inscription';</script>";
             $uploadOk = 0;
         }
         // Allow certain file formats
         if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
             && $imageFileType != "gif") {
             echo ".";
-            echo "<script type='text/javascript'>alert('Désolé nous acceptons uniquement les formats JPG, JPEG, PNG & GIF.');</script>";
+            echo "<script type='text/javascript'>alert('Désolé nous acceptons uniquement les formats JPG, JPEG, PNG & GIF.');
+            window.location.href = '../frontend/formulaire_inscription';</script>";
             $uploadOk = 0;
         }
         // Check if $uploadOk is set to 0 by an error
@@ -35,7 +38,8 @@ function uploadImage($target_dir)
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 return $target_file;
             } else {
-                echo "<script type='text/javascript'>alert('Une erreur est survenu pendant le téléchargement de votre image');</script>";
+                echo "<script type='text/javascript'>alert('Une erreur est survenu pendant le téléchargement de votre image');
+                window.location.href = '../frontend/formulaire_inscription';</script>";
             }
         }
     }
