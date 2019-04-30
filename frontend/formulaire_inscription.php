@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Premiere connexion</title>
+	<title>ECE Amazon</title>
 </head>
 <body>
-	<h2>Création d'un compte</h2>
+	<h2>Inscription au site</h2>
 	<form action="../backend/ajout_individu" method="post" enctype="multipart/form-data">
 		<table>
 			<tr><td>Nom:</td>
