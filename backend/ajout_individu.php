@@ -27,11 +27,12 @@
 //regarder s'il y a un résultat
         $test = mysqli_num_rows($result);
         if ($test < 1) {
-// le pseudo existe déjà dans la BDD
+// le pseudo n'existe pas dans la BDD
             $sql = "INSERT INTO individu VALUES('$nom', '$prenom', '$pseudo', '$statut', '$mail', '$mdp', '$adresse','$photo')";
             $result = mysqli_query($db_handle, $sql);
             echo "Compte crée avec succès" . "<br>";
         }else{
+// le pseudo existe déjà dans la BDD
             echo "Pseudo déjà pris";
         }
     }

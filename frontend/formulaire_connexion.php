@@ -6,7 +6,7 @@
 </head>
 <body>
 
-	<h3>Vendeur</h3>
+	<h3>Connexion à votre compte</h3>
 	<form>
 		<table>
 			<tr>
