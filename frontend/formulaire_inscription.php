@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h2>Création d'un compte</h2>
-	<form action="utils.php" method="post">
+	<form action="../backend/ajout_individu" method="post" enctype="multipart/form-data">
 		<table>
 			<tr><td>Nom:</td>
 				<td><input type="text" name="nom" required="true"></td>
@@ -38,10 +38,12 @@
 				<td>Adresse:</td>
 				<td><input type="text" name="adresse" required="true"></td>
 			</tr>
+
 			<tr>
 				<td>Photo de profil:</td>
-				<td><input type="file" name="photo" required="true"></td>
+				<td><input type="file" name="fileToUpload" id="fileToUpload"></td>
 			</tr>
+
 			<tr>
 				<td colspan="2" align="center">
 					<input type="submit" name="button" value="Valider"></td>

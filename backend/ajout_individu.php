@@ -1,4 +1,8 @@
-<?php
+<?php    
+    require 'upload_image.php';
+
+    $photo = uploadImage("uploads/");
+    
     $nom = isset($_POST["nom"])? $_POST["nom"] : "";
     $prenom = isset($_POST["prenom"])? $_POST["prenom"] : "";
     $pseudo = isset($_POST["pseudo"])? $_POST["pseudo"] : "";
@@ -6,7 +10,6 @@
     $mail = isset($_POST["mail"])? $_POST["mail"] : "";
     $mdp = isset($_POST["mdp"])? $_POST["mdp"] : "";
     $adresse = isset($_POST["adresse"])? $_POST["adresse"] : "";
-    $photo = isset($_POST["photo"])? $_POST["photo"] : "";
 
     // identifier votre BDD
     $database = "amazon";
@@ -17,25 +20,25 @@
     $db_found = mysqli_select_db($db_handle, $database);
 
     if ($_POST["button"]) {
-    if ($db_found) {
-        $sql = "SELECT * FROM individu";
-        if ($pseudo != "") {
-//on cherche le pseudo dans la bdd
-            $sql .= " WHERE Pseudo LIKE '%$pseudo%'";
-        }
-        $result = mysqli_query($db_handle, $sql);
-//regarder s'il y a un résultat
-        $test = mysqli_num_rows($result);
-        if ($test < 1) {
-// le pseudo n'existe pas dans la BDD
-            $sql = "INSERT INTO individu VALUES('$nom', '$prenom', '$pseudo', '$statut', '$mail', '$mdp', '$adresse','$photo')";
+        if ($db_found) {
+            $sql = "SELECT * FROM individu";
+            if ($pseudo != "") {
+    //on cherche le pseudo dans la bdd
+                $sql .= " WHERE Pseudo LIKE '%$pseudo%'";
+            }
             $result = mysqli_query($db_handle, $sql);
-            echo "Compte crée avec succès" . "<br>";
-        }else{
-// le pseudo existe déjà dans la BDD
-            echo "Pseudo déjà pris";
+    //regarder s'il y a un résultat
+            $test = mysqli_num_rows($result);
+            if ($test < 1) {
+    // le pseudo n'existe pas dans la BDD
+                $sql = "INSERT INTO individu VALUES('$nom', '$prenom', '$pseudo', '$statut', '$mail', '$mdp', '$adresse','$photo')";
+                $result = mysqli_query($db_handle, $sql);
+                echo "Compte crée avec succès" . "<br>";
+            }else{
+    // le pseudo existe déjà dans la BDD
+                echo "Pseudo déjà pris";
+            }
         }
-    }
-}
+    }   
 
 ?>
