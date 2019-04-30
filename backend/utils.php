@@ -12,11 +12,32 @@
     $database = "amazon";
     //connectez-vous dans votre BDD
     //Rappel: votre serveur = localhost et votre login = root et votre password = <rien>
+
     $db_handle = mysqli_connect('localhost', 'root', '');
     $db_found = mysqli_select_db($db_handle, $database);
+
     if ($_POST["button"]) {
-        $sql = "INSERT INTO individu VALUES('$nom', '$prenom', '$pseudo', '$statut', '$mail', '$mdp', '$adresse','$photo')";
+    if ($db_found) {
+        $sql = "SELECT * FROM individu";
+        if ($pseudo != "") {
+//on cherche le livre avec les paramètres titre et auteur
+            $sql .= " WHERE Pseudo LIKE '%$pseudo%'";
+            if ($mail != "") {
+                $sql .= " OR Email LIKE '%$mail%'";
+            }
+        }
         $result = mysqli_query($db_handle, $sql);
-        echo "ca a marché !!";
+//regarder s'il y a de résultat
+        $test = mysqli_num_rows($result);
+        if ($test < 1) {
+//le mail ou le pseudo existent déjà dans la BDD
+            $sql = "INSERT INTO individu VALUES('$nom', '$prenom', '$pseudo', '$statut', '$mail', '$mdp', '$adresse','$photo')";
+            $result = mysqli_query($db_handle, $sql);
+            echo "Add successful." . "<br>";
+        }else{
+            echo "C'est mort, trouve toi un autre pseudo";
+        }
     }
+}
+
 ?>

@@ -22,7 +22,7 @@ if ($_POST["button2"]) {
 			}
 		}
 		$result = mysqli_query($db_handle, $sql);
-//regarder s'il y a de résultat
+//regarder s'il y a des résultats
 		if (mysqli_num_rows($result) != 0) {
 //le livre est déjà dans la BDD
 			echo "Book already exists.
