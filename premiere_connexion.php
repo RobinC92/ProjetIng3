@@ -40,7 +40,7 @@
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
-					<input type="submit" name="button" value="ajouter"></td>
+					<input type="submit" name="button" value="Valider"></td>
 				</tr>
 			</table>
 		</form>
