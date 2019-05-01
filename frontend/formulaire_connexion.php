@@ -7,7 +7,7 @@
 <body>
 
 	<h3>Connexion à votre compte</h3>
-	<form action="verification.php" method="post">
+	<form action="../backend/verification_connexion" method="post">
 		<table>
 			<tr>
 				<td>Pseudo:</td>	

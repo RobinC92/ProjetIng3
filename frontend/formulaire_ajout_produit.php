@@ -5,15 +5,15 @@
 	<title>ECE Amazon</title>
 </head>
 <body>
-	<h2>Inscription au site</h2>
+	<h2>Ajout d'un produit</h2>
 	<form action="../backend/ajout_produit" method="post" enctype="multipart/form-data">
 		<table>
-			<tr><td>Prix:</td>
-				<td><input type="number" name="nom" required="true"></td>
-			</tr>
 			<tr>
 				<td>Nom:</td>
 				<td><input type="text" name="nom" required="true"></td>
+			</tr>
+			<tr><td>Prix:</td>
+				<td><input type="number" name="nom" required="true"></td>
 			</tr>
 			<tr>
 				<td>Description:</td>
