@@ -2,7 +2,6 @@
 function uploadImage($target_dir, $url)
 {
     if (!empty($_FILES)) {
-        echo $url;
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
