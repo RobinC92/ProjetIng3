@@ -21,7 +21,7 @@
     // le produit existe déjà dans la BDD
                $sql ="DELETE FROM individu WHERE Pseudo='$pseudo'";
                $result = mysqli_query($db_handle, $sql);
-               echo "le pseudo a bien été supprimé";
+               echo "le compte lié à ce pseudo a bien été supprimé";
             }
         }
     } 
