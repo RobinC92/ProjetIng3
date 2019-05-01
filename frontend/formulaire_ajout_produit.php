@@ -38,7 +38,7 @@
 				<td colspan="2" align="center">
 				<input type="submit" name="button" value="Valider"></td>
 			</tr>
-			</table>
-		</form>
+		</table>
+	</form>
 </body>
 </html>
