@@ -10,11 +10,7 @@
 	<table>
 		</tr>
 			<td colspan="2" align="center">
-			<input type="submit" name="button1" value="Liste acheteur"></td>
-		</tr>
-		</tr>
-			<td colspan="2" align="center">
-			<input type="submit" name="button2" value="Liste vendeur"></td>
+			<input type="submit" name="button" value="Liste acheteurs et vendeurs"></td>
 		</tr>
 	</table>
 </form>
