@@ -24,7 +24,7 @@ if ($db_found) {
             $_SESSION['adresse'] = $db_field['Adresse'];
             $_SESSION['photo'] = $db_field['Photo'];
             $_SESSION['coord'] = $db_field['Coordonnées_bancaire'];
-            $_SESSION['pannier'] = unserialise($db_field['Coordonnées_bancaire']);
+            $_SESSION['panier'] = unserialise($db_field['Panier']);
             echo "Vous êtes connecté";
         }
     }
