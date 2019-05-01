@@ -12,7 +12,7 @@
         if ($db_found) {
             $sql = "SELECT * FROM produit";
             if ($nom != "") {
-    //on cherche le pseudo dans la bdd
+    //on cherche le nom du produit dans la bdd
                 $sql .= " WHERE Nom LIKE '%$nom%'";
             }
             $result = mysqli_query($db_handle, $sql);
