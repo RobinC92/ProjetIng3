@@ -25,6 +25,7 @@ if ($db_found) {
             $_SESSION['photo'] = $db_field['Photo'];
             $_SESSION['coord'] = $db_field['Coordonnées_bancaire'];
             $_SESSION['panier'] = unserialise($db_field['Panier']);
+            $_SESSION['solde'] = $db_field['Solde'];
             echo "Vous êtes connecté";
         }
     }
