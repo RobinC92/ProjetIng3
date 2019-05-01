@@ -18,8 +18,8 @@
             else{
                 array_push($_SESSION['pannier'],$id);
                 $envoyer = serialize($_SESSION['panier']);
-                $sql = "INSERT INTO individu(Panier)
-                VALUES('$envoyer')
+                $sql = "UPDATE individu
+                SET Panier = '$envoyer'
                 WHERE Pseudo LIKE '%$pseudo%'";
             }
         }
@@ -32,8 +32,8 @@
         $envoyer = serialize($_SESSION['panier']);
         if ($db_found) {
             $envoyer = serialize($_SESSION['pseudo']);
-            $sql = "INSERT INTO individu(Panier)
-            VALUES('$envoyer')
+            $sql = "UPDATE individu
+            SET Panier = '$envoyer'
             WHERE Pseudo LIKE '%$pseudo%'";
         }
     }
