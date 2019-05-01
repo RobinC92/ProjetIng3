@@ -37,11 +37,6 @@
   </div>
 </nav>
   
-<div class="container">
-  <h3>Contenu</h3>
-  <p>Ceci est une page vide</p>
-</div>
-
 </body>
 </html>
 
