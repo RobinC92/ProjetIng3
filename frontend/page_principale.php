@@ -13,7 +13,8 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">ECE Amazon</a>
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span> ECE Amazon</a>
+      
     </div>
     <ul class="nav navbar-nav">
       <li>
@@ -31,9 +32,13 @@
       <li><a href="#">Ventes flash</a></li>
       <li><a href="#">Vendre</a></li>
       <li><a href="#">Votre compte</a></li>
-      <li><a href="#">Panier</a></li>
-      <li><a href="#">Admin</a></li>
+      <li><a href="#">admin</a></li>
     </ul>
+    <form class="navbar-form navbar-right inline-form">
+            <div class="form-group">
+               <a class="btn btn-warning"><span class="glyphicon  glyphicon-shopping-cart"></span> Ajouter au panier</a>
+            </div>
+    </form>
   </div>
 </nav>
 
