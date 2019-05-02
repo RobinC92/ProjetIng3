@@ -17,7 +17,7 @@
 				<td><input type="text" name="nom" required="true"></td>
 			</tr>
 			<tr><td>Prix:</td>
-				<td><input type="number" name="nom" required="true"></td>
+				<td><input type="number" name="prix" required="true"></td>
 			</tr>
 			<tr>
 				<td>Description:</td>

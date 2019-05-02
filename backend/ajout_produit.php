@@ -20,7 +20,7 @@
             $test = mysqli_num_rows($result);
             if ($test < 1) {
     // le pseudo n'existe pas dans la BDD
-                $sql = "INSERT INTO produit VALUES('$nom', '$prix', '$description', '$categorie','$photo')";
+                $sql = "INSERT INTO produit VALUES(0, '$nom', '$prix', '$description', '$categorie','$photo')";
                 $result = mysqli_query($db_handle, $sql);
                 echo "Produit ajouté avec succès" . "<br>";
             }else{
