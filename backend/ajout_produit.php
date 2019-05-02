@@ -19,13 +19,8 @@
     //regarder s'il y a un résultat
             $test = mysqli_num_rows($result);
             if ($test < 1) {
-<<<<<<< HEAD
     // le pseudo n'existe pas dans la BDD
                 $sql = "INSERT INTO produit VALUES(0, '$nom', '$prix', '$description', '$categorie','$photo')";
-=======
-    // le produit n'existe pas dans la BDD
-                $sql = "INSERT INTO produit VALUES('$nom', '$prix', '$description', '$categorie','$photo')";
->>>>>>> 143677cc335965f7e0f4f4865be06b486f363696
                 $result = mysqli_query($db_handle, $sql);
                 echo "Produit ajouté avec succès" . "<br>";
             }else{
