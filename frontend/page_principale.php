@@ -19,8 +19,7 @@
     <ul class="nav navbar-nav">
       <li>
 	      <div class="dropdown">
-	      	<button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Catégories
-	  		<span class="caret"></span></button>
+	      	<button class="btn dropdown-toggle" data-toggle="dropdown">Catégories</button>
 	  		<ul class="dropdown-menu">
 			    <li><a href="#">Livres</a></li>
 			    <li><a href="#">Musiques</a></li>
@@ -82,3 +81,12 @@
 
 </style>
 
+<script>
+
+$('ul.nav div.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
+
+</script>
