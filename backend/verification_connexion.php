@@ -1,6 +1,7 @@
 <?php
 
 require 'includes/connect_db.php';
+require 'panier.php';
 
 $pseudo = isset($_POST["pseudo"]) ? $_POST["pseudo"] : "";
 $mdp = isset($_POST["mdp"]) ? $_POST["mdp"] : "";
@@ -27,6 +28,10 @@ if ($db_found) {
             $_SESSION['panier'] = unserialize($db_field['Panier']);
             //$_SESSION['solde'] = $db_field['Solde'];
             echo "Vous êtes connecté";
+
+            //ajouterAuPanier(1);
+            //supprimerDuPanier(1);
+            //echo totalAPayer();
         }
     }
 
