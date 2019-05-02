@@ -7,15 +7,16 @@
     $prix = isset($_POST["prix"])? $_POST["prix"] : "";
     $description = isset($_POST["description"])? $_POST["description"] : "";
     $categorie = isset($_POST["categorie"])? $_POST["categorie"] : "";
+    //$pseudo = $_SESSION['pseudo'];
+    $pseudo = "robin";
 
     
     
     if ($_POST["button"]) {
         if ($db_found) {
-                $sql = "INSERT INTO produit VALUES(0, '$nom', '$prix', '$description', '$categorie','$photo')";
-                $result = mysqli_query($db_handle, $sql);
-                echo "Produit ajouté avec succès" . "<br>";           
+            $sql = "INSERT INTO produit VALUES(0, '$nom', '$prix', '$description', '$categorie','$photo','$pseudo')";
+            $result = mysqli_query($db_handle, $sql);
+            echo "Produit ajouté avec succès" . "<br>";
         }
     } 
-
 ?>

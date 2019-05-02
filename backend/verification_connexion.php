@@ -42,3 +42,4 @@ if ($db_found) {
         echo "Mauvais identifiants";
     }
 }
+?>
