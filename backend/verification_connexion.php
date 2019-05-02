@@ -19,13 +19,13 @@ if ($db_found) {
             $_SESSION['prenom'] = $db_field['Prenom'];
             $_SESSION['pseudo'] = $db_field['Pseudo'];
             $_SESSION['statut'] = $db_field['Statut'];
-            $_SESSION['mail'] = $db_field['Mail'];
+            $_SESSION['mail'] = $db_field['Email'];
             $_SESSION['mdp'] = $db_field['Mdp'];
             $_SESSION['adresse'] = $db_field['Adresse'];
             $_SESSION['photo'] = $db_field['Photo'];
-            $_SESSION['coord'] = $db_field['Coordonnées_bancaire'];
-            $_SESSION['panier'] = unserialise($db_field['Panier']);
-            $_SESSION['solde'] = $db_field['Solde'];
+            $_SESSION['coord'] = $db_field['Coordonnees_bancaires'];
+            $_SESSION['panier'] = unserialize($db_field['Panier']);
+            //$_SESSION['solde'] = $db_field['Solde'];
             echo "Vous êtes connecté";
         }
     }

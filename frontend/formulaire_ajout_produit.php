@@ -32,7 +32,6 @@
                     <option value="sports et loisir">Sports et Loisir</option>
 				</select></td>
 			</tr>
-
             <tr>
 				<td>Photo du produit :</td>
 				<td><input type="file" name="fileToUpload" id="fileToUpload"></td>
