@@ -10,8 +10,9 @@
 </head>
 <body>
 
-	<h3>Connexion à votre compte</h3>
-	<form action="../backend/verification_connexion" method="post">
+	<h3>Connexion admin</h3>
+    <p> La connexion sur cette page est réservée aux comptes administrateurs. <br> Cela ne sert à rien d'essayer de vous connecter avec votre compte acheteur ou vendeur. </p>
+	<form action="../backend/verification_connexion_admin" method="post">
 		<table>
 			<tr>
 				<td>Pseudo:</td>	
