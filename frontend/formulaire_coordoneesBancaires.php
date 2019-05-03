@@ -7,7 +7,7 @@ require_once('page_principale.php');
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Formulaire Coordonées Banquaire</title>
+    <title>Formulaire Coordonnées Banquaire</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='formulaire.css'>
     <script src='main.js'></script>
@@ -15,7 +15,7 @@ require_once('page_principale.php');
 <body>
 
 <div class="form-style-2">
-	<div class="form-style-2-heading">Coordonées bancaires</div>
+	<div class="form-style-2-heading">Coordonnées bancaires</div>
 		<br><br><br>
 		<form action="../backend/ajout_coordonnees_bancaires" method="post" enctype="multipart/form-data">
 
