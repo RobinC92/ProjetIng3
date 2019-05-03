@@ -1,9 +1,10 @@
 <?php 
 
 if(session_start()){
-    require 'formulaire_ajout_produit.php';
+    header('Location: formulaire_ajout_produit.php'); 
 } else{
-    require 'formulaire_connexion';
+    header('Location: formulaire_connexion');
+    
 }
 
 ?>
