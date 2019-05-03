@@ -29,7 +29,7 @@
         return $produits;
     }
 
-    function tableauDobjetId($id)
+    function objetParId($id)
     {
         require 'includes/connect_db.php';
         if($db_found) {
