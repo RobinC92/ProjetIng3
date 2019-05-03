@@ -37,18 +37,39 @@
 <style type="text/css">
   
   .page-footer {  
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: #222;
     color: #ccc;
-    padding: 10px 0 10px 0;
   }
 
   .footer-copyright {
     color: #666;
-    padding: 10px 0;
  }
 
 </style>
+
+<script>
+
+jQuery(document).ready(function($) {
+    /**
+     * Set footer always on the bottom of the page
+     */
+    function footerAlwayInBottom(footerSelector) {
+        var docHeight = $(window).height();
+        var footerTop = footerSelector.position().top + footerSelector.height();
+        if (footerTop < docHeight) {
+            footerSelector.css("margin-top", (docHeight - footerTop) + "px");
+        }
+    }
+    // Apply when page is loading 
+    footerAlwayInBottom($("#footer"));
+    // Apply when page is resizing
+    $(window).resize(function() {
+        footerAlwayInBottom($("#footer"));
+    });
+});
+
+</script>
