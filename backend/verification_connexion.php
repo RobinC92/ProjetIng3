@@ -14,7 +14,7 @@ if ($db_found) {
     $result = mysqli_query($db_handle, $sql);
     while ($db_field = mysqli_fetch_assoc($result)) {
 
-        if ($db_field['Pseudo'] == $pseudo && $db_field['Mdp'] == $mdp && $statut && $db_field['Statut']) {
+        if ($db_field['Pseudo'] == $pseudo && $db_field['Mdp'] == $mdp && $db_field['Statut'] == $statut)   {
             $connexion = 1;
             session_start();
             $_SESSION['nom'] = $db_field['Nom'];
