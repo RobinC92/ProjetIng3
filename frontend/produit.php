@@ -1,8 +1,7 @@
-<?php 
-	require '../backend/includes/connect_db.php';
-	require '../backend/recuperation_produit.php';
-	require 'affichage_produits.php';
-	require '../backend/panier.php';
+<?php
+    require '../backend/recuperation_produit.php';
+    require 'affichage_produits.php';
+    $id = $_GET['myid'];
 ?>
 
 <!DOCTYPE html>
@@ -15,12 +14,8 @@
 
 	<div id="section">
         <?php
-		session_start();
-		for($i=0 ; $i < count($_SESSION['panier']); $i++)
-		{
-			$produits = objetParId($_SESSION['panier'][$i]);
-			affichageProduit($produits);
-		}
+            $produit = objetParId($id);
+            affichageProduit($produit);
         ?>
         </div>
 	</div>
