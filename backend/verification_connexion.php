@@ -3,7 +3,6 @@
 require 'includes/connect_db.php';
 require 'panier.php';
 
-$statut = isset($_POST["statut"]) ? $_POST["statut"] : "";
 $pseudo = isset($_POST["pseudo"]) ? $_POST["pseudo"] : "";
 $mdp = isset($_POST["mdp"]) ? $_POST["mdp"] : "";
 
@@ -14,7 +13,7 @@ if ($db_found) {
     $result = mysqli_query($db_handle, $sql);
     while ($db_field = mysqli_fetch_assoc($result)) {
 
-        if ($db_field['Pseudo'] == $pseudo && $db_field['Mdp'] == $mdp && $db_field['Statut'] == $statut)   {
+        if ($db_field['Pseudo'] == $pseudo && $db_field['Mdp'] == $mdp)   {
             $connexion = 1;
             session_start();
             $_SESSION['nom'] = $db_field['Nom'];
