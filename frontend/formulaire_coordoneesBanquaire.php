@@ -15,7 +15,7 @@ require_once('page_principale.php');
 <body>
 
 <div class="form-style-2">
-	<div class="form-style-2-heading">Coordonnées banquaires</div>
+	<div class="form-style-2-heading">Coordonées banquaires</div>
 		<br><br><br>
 		<form action="../backend/ajout_coordonnees_bancaires" method="post" enctype="multipart/form-data">
 
