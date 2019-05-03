@@ -13,7 +13,7 @@ require_once('page_principale.php');
 <body>
 
 	<div class="form-style-2">
-		<div class="form-style-2-heading">Quel compte voulez-vous suprimmer</div>
+		<div class="form-style-2-heading">Quel compte voulez-vous suprimmer ?</div>
 		<br><br><br>
 		<form action="../backend/suppression_individu.php" method="post" enctype="multipart/form-data">
 
