@@ -1,5 +1,5 @@
 <?php
-	require_once('page_principale.php');
+    require_once('barre_navigation.php');
 ?>
 <!--
 <!DOCTYPE html>
@@ -97,6 +97,7 @@
 </body>
 
 </html>
+
 
 <!--
 <div class="form-style-2">
