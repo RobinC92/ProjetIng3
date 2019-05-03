@@ -2,6 +2,8 @@
     require 'upload_image.php';
     require 'includes/connect_db.php';
 
+    session_start();
+
     $type_carte = isset($_POST["type_carte"])? $_POST["type_carte"] : "";
     $numero_carte = isset($_POST["numero_carte"])? $_POST["numero_carte"] : "";
     $nom_carte = isset($_POST["nom_carte"])? $_POST["nom_carte"] : "";

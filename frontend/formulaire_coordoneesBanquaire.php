@@ -15,9 +15,9 @@ require_once('page_principale.php');
 <body>
 
 <div class="form-style-2">
-	<div class="form-style-2-heading">Coordonées banquaires</div>
+	<div class="form-style-2-heading">Coordonnées banquaires</div>
 		<br><br><br>
-		<form action="../backend/ajout_individu" method="post" enctype="multipart/form-data">
+		<form action="../backend/ajout_coordonnees_bancaires" method="post" enctype="multipart/form-data">
 
 			
 			<label for="field4"><span>Type de carte</span><select name="type_carte" id="classe" class="select-field">
