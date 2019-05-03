@@ -1,5 +1,5 @@
 <?php
-require_once('page_principale.php');
+	require_once('page_principale.php');
 ?>
 <!--
 <!DOCTYPE html>
