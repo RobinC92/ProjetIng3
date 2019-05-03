@@ -12,18 +12,21 @@
 	<title> Galerie de Villes </title>
 </head>
 <body>
-
+	<p>Votre total a payer est de 
+	<?php
+		session_start();
+		echo totalAPayer(); 
+	?></p>
+	<a href="../backend/validation_commande.php">Payer</a>
 	<div id="section">
         <?php
-		session_start();
 		for($i=0 ; $i < count($_SESSION['panier']); $i++)
 		{
 			$produits = objetParId($_SESSION['panier'][$i]);
 			affichageProduit($produits);
 		}
         ?>
-        </div>
-	</div>
+    </div>
 </body>
 </html>
 
