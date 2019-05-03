@@ -1,10 +1,7 @@
-<?php 
-	require '../backend/includes/connect_db.php';
-	require '../backend/recuperation_produit.php';
-	require 'affichage_produits.php';
-	require '../backend/panier.php';
-
-	$produits = tableauDobjetCategorie("vetements");	
+<?php
+    require '../backend/recuperation_produit.php';
+    require 'affichage_produits.php';
+    $id = $_GET['myid'];
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +14,8 @@
 
 	<div id="section">
         <?php
-			affichageProduits($produits);
+            $produit = objetParId($id);
+            affichageProduit($produit);
         ?>
         </div>
 	</div>

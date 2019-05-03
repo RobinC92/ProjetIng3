@@ -12,7 +12,7 @@
 
         return $objet;
     }
-    function tableauDobjet($cate)
+    function tableauDobjetCategorie($cate)
     {
         require 'includes/connect_db.php';
         if($db_found) {
@@ -27,5 +27,20 @@
             echo "Database not found";
         }
         return $produits;
+    }
+
+    function objetParId($id)
+    {
+        require 'includes/connect_db.php';
+        if($db_found) {
+            $sql = "SELECT * FROM produit WHERE ID ='".$id."'";    
+            $result = mysqli_query($db_handle, $sql);
+            $data = mysqli_fetch_assoc($result);
+            $produit = produitEnObjet($data['ID'], $data['Nom'], $data['Prix'],
+            $data['Description'], $data['Categorie'], $data['Photo'], $data['Pseudo']);
+        } else {
+            echo "Database not found";
+        }
+        return $produit;
     }
 ?>

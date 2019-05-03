@@ -3,8 +3,6 @@
 	require '../backend/recuperation_produit.php';
 	require 'affichage_produits.php';
 	require '../backend/panier.php';
-
-	$produits = tableauDobjetCategorie("vetements");	
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +15,12 @@
 
 	<div id="section">
         <?php
-			affichageProduits($produits);
+		session_start();
+		for($i=0 ; $i < count($_SESSION['panier']); $i++)
+		{
+			$produits = objetParId($_SESSION['panier'][$i]);
+			affichageProduit($produits);
+		}
         ?>
         </div>
 	</div>
