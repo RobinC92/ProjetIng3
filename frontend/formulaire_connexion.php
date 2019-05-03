@@ -56,7 +56,7 @@ require_once('page_principale.php');
 			
 			<br>
 			
-			<label><span> </span><input type="submit" value="Valider" /></label>	
+			<label><span> </span><input type="submit" name="button" value="Valider" /></label>	
 		</form>
 	</div>
 
