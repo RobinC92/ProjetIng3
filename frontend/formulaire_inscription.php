@@ -84,8 +84,11 @@ require_once('page_principale.php');
 			<label for="field2"><span>Email <span class="required">*</span></span><input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="input-field" name="mail" value="" /></label>	
 			<label for="field2"><span>Mot de passe <span class="required">*</span></span><input type="password" class="input-field" name="mdp" value="" /></label>
 			<label for="field2"><span>Adresse <span class="required">*</span></span><input type="text" class="input-field" name="adresse" value="" /></label>
-			<label for="field2"><span>Numéro de carte <span class="required">*</span></span><input type="text" class="input-field" maxlength="16" pattern="[0-9]{16}" placeholder="16 caractères" name="coord" value="" /></label>
-			<label for="field2"><span>Photo de profil <span class="required">*</span></span><input type="file" class="input-field" name="fileToUpload"  id="fileToUpload"  value="" /></label>
+			<label for="field2"><span>Ville <span class="required">*</span></span><input type="text" class="input-field" name="ville" value="" /></label>
+			<label for="field2"><span>Code postal <span class="required">*</span></span><input type="text" class="input-field" name="code_postal" value="" /></label>
+			<label for="field2"><span>Pays <span class="required">*</span></span><input type="text" class="input-field" name="pays" value="" /></label>
+			<label for="field2"><span>Téléphone <span class="required">*</span></span><input type="text" class="input-field" name="telephone" value="" /></label>
+			<label for="field2"><span>Photo de profil<span class="required">*</span></span><input type="file" class="input-field" name="fileToUpload"  id="fileToUpload"  value="" /></label>
 			
 			<label><span> </span><input type="submit" name="button" value="Valider" /></label>
 

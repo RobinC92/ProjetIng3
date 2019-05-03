@@ -7,10 +7,13 @@
     $prenom = isset($_POST["prenom"])? $_POST["prenom"] : "";
     $pseudo = isset($_POST["pseudo"])? $_POST["pseudo"] : "";
     $statut = isset($_POST["statut"])? $_POST["statut"] : "";
-    $mail = isset($_POST["mail"])? $_POST["mail"] : "";
+    $email = isset($_POST["email"])? $_POST["email"] : "";
     $mdp = isset($_POST["mdp"])? $_POST["mdp"] : "";
     $adresse = isset($_POST["adresse"])? $_POST["adresse"] : "";
-    $coord = isset($_POST["coord"])? $_POST["coord"] : "";
+    $ville = isset($_POST["ville"])? $_POST["ville"] : "";
+    $code_postal = isset($_POST["code_postal"])? $_POST["code_postal"] : "";
+    $pays = isset($_POST["pays"])? $_POST["pays"] : "";
+    $telephone = isset($_POST["telephone"])? $_POST["telephone"] : "";
 
     if ($_POST["button"]) {
         if ($db_found) {
@@ -24,7 +27,7 @@
             $test = mysqli_num_rows($result);
             if ($test < 1) {
     // le pseudo n'existe pas dans la BDD
-                $sql = "INSERT INTO individu VALUES('$nom', '$prenom', '$pseudo', '$statut', '$mail', '$mdp', '$adresse','$photo','$coord')";
+                $sql = "INSERT INTO individu VALUES('$nom', '$prenom', '$pseudo', '$statut', '$email', '$mdp', '$adresse','$ville','$code_postal','$pays','$telephone','$photo',0,0,0,0,0,0,0)";
                 $result = mysqli_query($db_handle, $sql);
                 echo "Compte crée avec succès" . "<br>";
             }else{
