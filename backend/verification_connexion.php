@@ -46,7 +46,13 @@ if ($db_found) {
     }
 
     if ($connexion == 1) {
-        header("Location: {$_SESSION['url']}");
+        if(isset($_SESSION['url']))
+        {
+            header("Location: {$_SESSION['url']}");
+        }
+        else{
+            header("Location: {$_SESSION['url2']}");
+        }
         exit();
     } else {  
         header("Location: {$_SERVER['HTTP_REFERER']}");

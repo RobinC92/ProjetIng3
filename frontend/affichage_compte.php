@@ -27,7 +27,8 @@ echo "
                     <label for='field2'><span></span>Code_Postal : ".$_SESSION['code_postal']."</label><br>
                     <label for='field2'><span></span>Pays : ".$_SESSION['pays']."</label><br>
                     <label for='field2'><span></span>Telephone : ".$_SESSION['telephone']."</label><br>
-                    <label for='field2'><span></span>Image du compte :</label><br>
+                    <label for='field2'><span></span>Votre Solde : ".$_SESSION['solde']."</label><br>
+                    <label for='field2'><span></span>Image du compte :</label><br>            
                     <label for='field2'><span></span><img src='"."../backend/".$_SESSION['photo']."'></label><br>
                 </form>
             </div>"?>
