@@ -13,6 +13,12 @@
 </head>
 <body>
 
+<?php 
+
+echo "<div class='form-style-2-heading'> Description du produit </div>"
+
+?>
+
 	<div id="section">
         <?php
             $produit = objetParId($id);
