@@ -4,7 +4,7 @@
 	require 'affichage_produits.php';
 	require '../backend/panier.php';
 	
-	require_once('page_principale.php');
+	require_once('barre_navigation.php');
 
 	$categorie = $_GET['categorie'];
 	$produits = tableauDobjetCategorie($categorie);	
@@ -37,16 +37,21 @@
 	
 </head>
 <body>
-	<?php 
-
-		echo "<div class='form-style-2-heading'> Catégorie : ".$affichage."</div>"
-	
-	?>
-	<div id="section">
-        <?php
-			affichageProduits($produits);
+	<div id="page">
+		<div id="content">
+			<?php 
+				echo "<div class='form-style-2-heading'> Catégorie : ".$affichage."</div>"
+			?>
+			<div id="section">
+				<?php
+					affichageProduits($produits);
+				?>
+				</div>
+			</div>
+		</div>
+		<?php
+            require_once('footer.php');
         ?>
-        </div>
 	</div>
 </body>
 </html>

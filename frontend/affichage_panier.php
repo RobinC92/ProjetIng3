@@ -4,7 +4,7 @@
 	require 'affichage_produits.php';
 	require '../backend/panier.php';
 
-	require_once('page_principale.php');
+	require_once('barre_navigation.php');
 ?>
 
 <!DOCTYPE html>
@@ -19,15 +19,22 @@
 		echo totalAPayer(); 
 	?></p>
 	<a href="formulaire_coordonnees_bancaires">Payer</a>
-	<div id="section">
-        <?php
-		for($i=0 ; $i < count($_SESSION['panier']); $i++)
-		{
-			$produits = objetParId($_SESSION['panier'][$i]);
-			affichageProduit($produits);
-		}
-        ?>
-    </div>
+	<div id="page">
+		<div id="content">
+			<div id="section">
+				<?php
+				for($i=0 ; $i < count($_SESSION['panier']); $i++)
+				{
+					$produits = objetParId($_SESSION['panier'][$i]);
+					affichageProduit($produits);
+				}
+				?>
+			</div>
+		</div>
+		<?php
+            require_once('footer.php');
+        ?>	
+	</div>
 </body>
 </html>
 
