@@ -1,7 +1,7 @@
 
 <?php
     function affichageProduits($produits){
-        session_start();
+        //session_start();
         for ($i=0;$i<count($produits);$i++){
             echo"
             <div class='ville'>
