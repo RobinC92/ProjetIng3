@@ -12,6 +12,21 @@
 	{
 		$affichage = "Livres";
 	}
+
+	if ($categorie=="musiques")
+	{
+		$affichage = "Musiques";
+	}
+
+	if ($categorie=="sport")
+	{
+		$affichage = "Sports et Loisir";
+	}
+
+	if ($categorie=="vetements")
+	{
+		$affichage = "Vetements";
+	}
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +34,7 @@
 <head>
 	<meta charset="utf-8">
 	<title> Boutique </title>
-	<link rel='stylesheet' type='text/css' media='screen' href='formulaire.css'>
+	
 </head>
 <body>
 	<?php 
@@ -74,7 +89,23 @@
 		color :white;
 		
 	}
-		
+
+	.form-style-2-heading {
+		font-weight: bold;
+		font-style: italic;
+		border-bottom: 2px solid #ddd;
+		margin-bottom: 10px;
+		font-size: 20px;
+		padding-bottom: 3px;
+		margin-left: auto;
+		margin-right: auto;
+	}		
+
+	.ville:hover{
+		background: rgba(0,0,0,0);
+	
+		box-shadow: inset 0 0 0 3px #FF8500;
+	}
 		
 	
 </style>
