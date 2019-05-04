@@ -1,6 +1,3 @@
-<?php
-require_once('page_principale.php');
-?>
 <!DOCTYPE html>
 <html>
 
@@ -11,21 +8,29 @@ require_once('page_principale.php');
 </head>
 
 <body>
-
-	<div class="form-style-2">
-	
-		<div class="form-style-2-heading">Connexion à votre compte</div>
-		<br><br><br>
-		<form action="../backend/verification_connexion.php" method="post">
-		<label for="field1"><span>Pseudo <span class="required">*</span></span><input required="true" type="text" class="input-field" name="pseudo" value="" /></label>
-		<label for="field2"><span>Mot de Passe <span class="required">*</span></span><input required="true" type="password" class="input-field" name="mdp" value="" /></label>
-			
-			<br>
-			
-			<label><span> </span><input type="submit" name="button" value="Valider" /></label>	
-		</form>
+	<div id="page">
+		<?php
+		require_once('barre_navigation.php');
+		?>
+		<div id="content">
+			<div class="form-style-2">
+				
+				<div class="form-style-2-heading">Connexion à votre compte</div>
+				<br><br><br>
+				<form action="../backend/verification_connexion.php" method="post">
+				<label for="field1"><span>Pseudo <span class="required">*</span></span><input required="true" type="text" class="input-field" name="pseudo" value="" /></label>
+				<label for="field2"><span>Mot de Passe <span class="required">*</span></span><input required="true" type="password" class="input-field" name="mdp" value="" /></label>
+					
+					<br>
+					
+					<label><span> </span><input type="submit" name="button" value="Valider" /></label>	
+				</form>
+			</div>
+		</div>
+		<?php
+		require_once('footer.php');
+		?>
 	</div>
-
 </body>
 
 </html>

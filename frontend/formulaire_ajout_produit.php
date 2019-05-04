@@ -1,7 +1,3 @@
-<?php
-require_once('page_principale.php');
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -12,26 +8,36 @@ require_once('page_principale.php');
 </head>
 
 <body>
-	<div class="form-style-2">
-		<div class="form-style-2-heading">Ajout d'un produit</div>
-		<br><br><br>
-		<form action="../backend/ajout_produit" method="post" enctype="multipart/form-data">
-		
-		<label for="field1"><span>Nom du produit <span class="required">*</span></span><input required="true" type="text" class="input-field" name="nom" value="" /></label>
-		<label for="field2"><span>Prix<span class="required">*</span></span><input required="true" placeholder="€" pattern="[0-9]+" type="text" class="input-field" name="prix" value="" /></label>
-			
-			<label for="field4"><span>Catégorie</span><select name="categorie" id="classe" class="select-field">
-					<option value="livres">Livres</option>
-					<option value="musiques">Musiques</option>
-					<option value="vetements">Vêtements</option>
-					<option value="sport">Sports et Loisir</option>
-				</select></label>
-			<label for="field5"><span>Description <span class="required">*</span></span><textarea required="true" name="description" class="textarea-field"></textarea></label>
-			<label for="field1"><span>Photo du produit <span class="required">*</span></span><input required="true" type="file" class="input-field" name="fileToUpload" id="fileToUpload" value="" /></label>
-
-			<label><span> </span><input type="submit" name="button" value="Valider" /></label>
+	<div id="page">
+		<?php
+		require_once('barre_navigation.php');
+		?>
+		<div id="content">
+			<div class="form-style-2">
+				<div class="form-style-2-heading">Ajout d'un produit</div>
+				<br><br><br>
+				<form action="../backend/ajout_produit" method="post" enctype="multipart/form-data">
 				
-		</form>
+				<label for="field1"><span>Nom du produit <span class="required">*</span></span><input required="true" type="text" class="input-field" name="nom" value="" /></label>
+				<label for="field2"><span>Prix<span class="required">*</span></span><input required="true" placeholder="€" pattern="[0-9]+" type="text" class="input-field" name="prix" value="" /></label>
+					
+					<label for="field4"><span>Catégorie</span><select name="categorie" id="classe" class="select-field">
+							<option value="livres">Livres</option>
+							<option value="musiques">Musiques</option>
+							<option value="vetements">Vêtements</option>
+							<option value="sport">Sports et Loisir</option>
+						</select></label>
+					<label for="field5"><span>Description <span class="required">*</span></span><textarea required="true" name="description" class="textarea-field"></textarea></label>
+					<label for="field1"><span>Photo du produit <span class="required">*</span></span><input required="true" type="file" class="input-field" name="fileToUpload" id="fileToUpload" value="" /></label>
+
+					<label><span> </span><input type="submit" name="button" value="Valider" /></label>
+						
+				</form>
+			</div>
+		</div>
+		<?php
+			require_once('footer.php')
+		?>
 	</div>
 </body>
 

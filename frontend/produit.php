@@ -1,8 +1,7 @@
 <?php
-    require '../backend/recuperation_produit.php';
-	require 'affichage_produits.php';
-	require 'page_principale.php';
-    $id = $_GET['myid'];
+require '../backend/recuperation_produit.php';
+require 'affichage_produits.php';
+$id = $_GET['myid'];
 ?>
 
 <!DOCTYPE html>
@@ -12,20 +11,27 @@
 	<title> Galerie de Villes </title>
 </head>
 <body>
-
-<?php 
-
-echo "<div class='form-style-2-heading'> Description du produit </div>"
-
-?>
-
-	<div id="section">
-        <?php
-            $produit = objetParId($id);
-            affichageDescription($produit);
+	<div id="page">
+		<?php
+            require_once('barre_navigation.php');
         ?>
-        </div>
+		<div id="content">
+			<?php
+				echo "<div class='form-style-2-heading'>Fiche du produit </div>"
+			?>
+
+			<div id="section">
+				<?php
+					$produit = objetParId($id);
+					affichageDescription($produit);
+				?>
+			</div>
+		</div>
+		<?php
+            require_once('footer.php');
+        ?>
 	</div>
+
 </body>
 </html>
 
@@ -36,7 +42,7 @@ echo "<div class='form-style-2-heading'> Description du produit </div>"
 		height: 100%;
 		background-color: #eeeeee;
 	}
-	
+
 	img {
 		width: 60%;
 		float:left;
@@ -48,8 +54,8 @@ echo "<div class='form-style-2-heading'> Description du produit </div>"
 		float: right;
 		margin-top: 0px;
 
-		
-		
+
+
 	}
 
 	#section {
@@ -59,7 +65,7 @@ echo "<div class='form-style-2-heading'> Description du produit </div>"
 		background-color: #eeeeee;
 	}
 	.description {
-		
+
 		width: 50%;
 		margin-top: 20px;
 		margin-bottom: 20px;
@@ -71,12 +77,12 @@ echo "<div class='form-style-2-heading'> Description du produit </div>"
 		font-weight: bold;
 		height: 500px;
 		margin-left: 25%;
-		
+
 	}
 
 
 	.ajoutpanier{
-		
+
 	border:none;
 	padding:6px 0 6px 0;
 	border-radius:3px;
@@ -90,7 +96,7 @@ echo "<div class='form-style-2-heading'> Description du produit </div>"
 
 	a{
 		color :white;
-		
+
 	}
 
 	.form-style-2-heading {
@@ -102,6 +108,6 @@ echo "<div class='form-style-2-heading'> Description du produit </div>"
 		padding-bottom: 3px;
 		margin-left: auto;
 		margin-right: auto;
-	}		
-		
+	}
+
 </style>
