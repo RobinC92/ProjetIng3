@@ -59,7 +59,7 @@ jQuery(document).ready(function($) {
      */
     function footerAlwayInBottom(footerSelector) {
         var docHeight = $(window).height();
-        var footerTop = footerSelector.position().top + footerSelector.height();
+        var footerTop = footerSelector.position() + footerSelector.height();
         if (footerTop < docHeight) {
             footerSelector.css("margin-top", (docHeight - footerTop) + "px");
         }

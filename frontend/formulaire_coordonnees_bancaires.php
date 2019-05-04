@@ -10,14 +10,13 @@ require_once('page_principale.php');
     <title>Formulaire Coordonnées Banquaire</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='formulaire.css'>
-    <script src='main.js'></script>
 </head>
 <body>
 
 <div class="form-style-2">
 	<div class="form-style-2-heading">Coordonnées bancaires</div>
 		<br><br><br>
-		<form action="../backend/ajout_coordonnees_bancaires" method="post" enctype="multipart/form-data">
+		<form action="../backend/ajout_coordonnees_bancaires.php" method="post" enctype="multipart/form-data">
 
 			
 			<label for="field4"><span>Type de carte</span><select name="type_carte" id="classe" class="select-field">

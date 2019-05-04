@@ -18,7 +18,7 @@
 	<?php
 		echo totalAPayer(); 
 	?></p>
-	<a href="../backend/validation_commande.php">Payer</a>
+	<a href="formulaire_coordonnees_bancaires">Payer</a>
 	<div id="section">
         <?php
 		for($i=0 ; $i < count($_SESSION['panier']); $i++)
