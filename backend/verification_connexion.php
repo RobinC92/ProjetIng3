@@ -16,6 +16,7 @@ if ($db_found) {
         if ($db_field['Pseudo'] == $pseudo && $db_field['Mdp'] == $mdp)   {
             $connexion = 1;
             session_start();
+            $_SESSION['flag'] = true;
             $_SESSION['nom'] = $db_field['Nom'];
             $_SESSION['prenom'] = $db_field['Prenom'];
             $_SESSION['pseudo'] = $db_field['Pseudo'];
@@ -46,7 +47,7 @@ if ($db_found) {
     }
 
     if ($connexion == 1) {
-        header("Location: ../frontend/affichage_panier.php");
+        header("Location: ../frontend/vendre.php");
         exit();
         // header('Location: ventes_flash.php');
         // exit();
