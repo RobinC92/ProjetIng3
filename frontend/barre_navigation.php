@@ -39,7 +39,7 @@
       </ul>
       <form class="navbar-form navbar-right inline-form">
         <div class="form-group">
-          <a class="btn btn-warning"><span class="glyphicon  glyphicon-shopping-cart"></span> Ajouter au panier</a>
+          <a class="btn btn-warning"><span class="glyphicon  glyphicon-shopping-cart"></span> Panier</a>
         </div>
       </form>
     </div>
