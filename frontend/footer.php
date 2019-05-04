@@ -35,12 +35,18 @@
 
 
 <style type="text/css">
+
+    #page {
+        min-height:100vh; /* 1 */
+        display:flex; /* 2 */
+        flex-direction:column; /* 3 */
+    }
+
+    #content {
+        flex-grow:1; /* 4 */
+    }
   
   .page-footer {  
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     background-color: #222;
     color: #ccc;
   }
