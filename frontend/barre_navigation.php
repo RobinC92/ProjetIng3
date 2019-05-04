@@ -25,10 +25,10 @@
           <div class="dropdown">
             <button class="btn dropdown-toggle" data-toggle="dropdown">Catégories</button>
             <ul class="dropdown-menu">
-              <li><a href="#">Livres</a></li>
-              <li><a href="#">Musiques</a></li>
-              <li><a href="#">Vêtements</a></li>
-              <li><a href="#">Sports et loisirs</a></li>
+              <li><a href="affichage_categories.php?categorie=livres">Livres</a></li>
+              <li><a href="affichage_categories.php?categorie=musiques">Musiques</a></li>
+              <li><a href="affichage_categories.php?categorie=vetements">Vêtements</a></li>
+              <li><a href="affichage_categories.php?categorie=sport">Sports et loisirs</a></li>
             </ul>
           </div>
         </li>

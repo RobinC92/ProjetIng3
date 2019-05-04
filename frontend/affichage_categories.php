@@ -3,8 +3,11 @@
 	require '../backend/recuperation_produit.php';
 	require 'affichage_produits.php';
 	require '../backend/panier.php';
+	
+	require_once('page_principale.php');
 
-	$produits = tableauDobjetCategorie("vetements");	
+	$categorie = $_GET['categorie'];
+	$produits = tableauDobjetCategorie($categorie);	
 ?>
 
 <!DOCTYPE html>

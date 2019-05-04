@@ -47,7 +47,7 @@ if ($db_found) {
     }
 
     if ($connexion == 1) {
-        header("Location: ../frontend/vendre.php");
+        header("Location: ../frontend/affichage_panier.php");
         exit();
         // header('Location: ventes_flash.php');
         // exit();

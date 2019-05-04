@@ -1,5 +1,5 @@
 <?php
-    function produitEnObjet($id, $nom, $prix, $description, $categorie, $photo, $pseudo){
+    function produitEnObjet($id, $nom, $prix, $description, $categorie, $photo, $pseudo, $ventes){
         $objet = (object) array(
             'id' => $id,
             'nom' => $nom,
@@ -7,7 +7,8 @@
             'description' => $description,
             'categorie' => $categorie,
             'photo' => $photo,
-            'pseudo' => $pseudo
+            'pseudo' => $pseudo,
+            'ventes' => $ventes
         );
 
         return $objet;
@@ -21,7 +22,7 @@
             $produits=array();
             while ($data = mysqli_fetch_assoc($result)) {
                 array_push($produits,produitEnObjet($data['ID'], $data['Nom'], $data['Prix'],
-                $data['Description'], $data['Categorie'], $data['Photo'], $data['Pseudo']));
+                $data['Description'], $data['Categorie'], $data['Photo'], $data['Pseudo'], $data['Ventes']));
             }
         } else {
             echo "Database not found";
@@ -37,7 +38,7 @@
             $result = mysqli_query($db_handle, $sql);
             $data = mysqli_fetch_assoc($result);
             $produit = produitEnObjet($data['ID'], $data['Nom'], $data['Prix'],
-            $data['Description'], $data['Categorie'], $data['Photo'], $data['Pseudo']);
+            $data['Description'], $data['Categorie'], $data['Photo'], $data['Pseudo'], $data['Ventes']);
         } else {
             echo "Database not found";
         }
