@@ -21,16 +21,19 @@
 	<a href="formulaire_coordonnees_bancaires">Payer</a>
 	<div id="page">
 		<div id="content">
-			<div id="section">
+			
 				<?php
 				for($i=0 ; $i < count($_SESSION['panier']); $i++)
 				{
 					$produits = objetParId($_SESSION['panier'][$i]);
+					
 					affichageProduit($produits);
+					
 				}
+			
 				?>
 			</div>
-		</div>
+		
 		<?php
             require_once('footer.php');
         ?>	
@@ -42,16 +45,38 @@
 	#section {
 		float: left;
 		width: 100%;
-		height: 100%;
+		height: 50%;
 		background-color: #eeeeee;
+		width: 50%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		border: solid black 2px;
+		padding: 50px;
+		background-color: white;
+		text-align: center;
+		font: bold Arial, Helvetica, sans-serif;
+		font-weight: bold;
+		height: 500px;
+		margin-left: 25%;
 	}
 	.ville {
+		
 		width: 20%;
 		float: left;
 		border: solid #bbbbbb 1px;
 		padding: 5px;
+		
 	}
+	
 	img {
-		width: 100%;
+		width: 60%;
+		float:left;
+		height: 100%;
 	}
+
+	
+	.recap{
+		width: 25%;
+		float: right;
+		margin-top: 0px;
 </style>
