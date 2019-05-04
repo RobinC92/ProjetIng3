@@ -3,8 +3,6 @@
 	require '../backend/recuperation_produit.php';
 	require 'affichage_produits.php';
 	require '../backend/panier.php';
-	
-	require_once('barre_navigation.php');
 
 	$categorie = $_GET['categorie'];
 	$produits = tableauDobjetCategorie($categorie);	
@@ -38,6 +36,7 @@
 </head>
 <body>
 	<div id="page">
+	<?php require_once('barre_navigation.php');?>
 		<div id="content">
 			<?php 
 				echo "<div class='form-style-2-heading'> Catégorie : ".$affichage."</div>"
