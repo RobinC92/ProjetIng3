@@ -21,13 +21,4 @@
 </html>
 
 <style>
-    #page {
-        min-height:100vh; /* 1 */
-        display:flex; /* 2 */
-        flex-direction:column; /* 3 */
-    }
-
-    #content {
-        flex-grow:1; /* 4 */
-    }
 </style>
