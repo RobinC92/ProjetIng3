@@ -9,12 +9,13 @@
     $categorie = isset($_POST["categorie"])? $_POST["categorie"] : "";
     //$pseudo = $_SESSION['pseudo'];
     $pseudo = "robin";
+    $vente = 0;
 
     
     
     if ($_POST["button"]) {
         if ($db_found) {
-            $sql = "INSERT INTO produit VALUES(0, '$nom', '$prix', '$description', '$categorie','$photo','$pseudo')";
+            $sql = "INSERT INTO produit VALUES(0, '$nom', '$prix', '$description', '$categorie','$photo','$pseudo','$vente')";
             $result = mysqli_query($db_handle, $sql);
             echo "Produit ajouté avec succès" . "<br>";
         }

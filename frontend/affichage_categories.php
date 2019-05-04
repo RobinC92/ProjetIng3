@@ -8,6 +8,10 @@
 
 	$categorie = $_GET['categorie'];
 	$produits = tableauDobjetCategorie($categorie);	
+	if ($categorie=="livres")
+	{
+		$affichage = "Livres";
+	}
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +22,11 @@
 	<link rel='stylesheet' type='text/css' media='screen' href='formulaire.css'>
 </head>
 <body>
+	<?php 
 
+		echo "<div class='form-style-2-heading'> Catégorie : ".$affichage."</div>"
+	
+	?>
 	<div id="section">
         <?php
 			affichageProduits($produits);
@@ -36,7 +44,7 @@
 		background-color: #eeeeee;
 	}
 	.ville {
-		width: 18%;
+		width: 16.66%;
 		float: left;
 		border: solid #bbbbbb 2px;
 		padding: 5px;
