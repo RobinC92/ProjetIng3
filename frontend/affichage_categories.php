@@ -36,8 +36,8 @@
 </head>
 <body>
 	<div id="page">
+	<?php require_once('barre_navigation.php');?>
 		<div id="content">
-		<?php require_once('barre_navigation.php');?>
 			<?php 
 				echo "<div class='form-style-2-heading'> Catégorie : ".$affichage."</div>"
 			?>
@@ -45,12 +45,11 @@
 				<?php
 					affichageProduits($produits);
 				?>
-				</div>
 			</div>
 		</div>
 		<?php
-            require_once('footer.php');
-        ?>
+        	require_once('footer.php');
+       	?>
 	</div>
 </body>
 </html>
