@@ -44,7 +44,6 @@
     }
 
     function totalAPayer(){
-        //session_start();
         require 'includes/connect_db.php';
         $total = 0;
         $sql = "SELECT * FROM produit";
