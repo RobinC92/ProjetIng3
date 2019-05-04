@@ -1,81 +1,140 @@
-<?php 
-	require '../backend/includes/connect_db.php';
-	require '../backend/recuperation_produit.php';
-	require 'affichage_produits.php';
-	require '../backend/panier.php';
+<?php
+require '../backend/includes/connect_db.php';
+require '../backend/recuperation_produit.php';
+require 'affichage_produits.php';
+require '../backend/panier.php';
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
-	<title> Galerie de Villes </title>
+	<title> Panier </title>
 </head>
+
 <body>
 	<div id="page">
-	<?php require_once('barre_navigation.php'); ?>
-	<p>Votre total a payer est de 
-	<?php
-		echo totalAPayer(); 
-	?></p>
-	<a href="formulaire_coordonnees_bancaires">Payer</a>
-		<div id="content">
-			
-				<?php
-				for($i=0 ; $i < count($_SESSION['panier']); $i++)
-				{
-					$produits = objetParId($_SESSION['panier'][$i]);
-					
-					affichageProduit($produits);
-					
-				}
-			
-				?>
+		<?php require_once('barre_navigation.php'); ?>
+		<div class="alignement">
+		<div class="prix">
+		<p>Votre total à payer est de
+			<?php
+			echo totalAPayer()  ;
+			echo " €";
+			?></p> 
 			</div>
-		
+		<div class="payer">
+			<a href="formulaire_coordonnees_bancaires">Payer</a>
+		</div>
+		</div>
+
+		<div id="content">
+
+			<?php
+			echo "<div class='total'>";
+			for ($i = 0; $i < count($_SESSION['panier']); $i++) {
+				$produits = objetParId($_SESSION['panier'][$i]);
+
+				affichageProduit($produits);
+			}
+			echo "</div>";
+			?>
+		</div>
+
 		<?php
-            require_once('footer.php');
-        ?>	
+		require_once('footer.php');
+		?>
 	</div>
 </body>
+
 </html>
 
 <style type="text/css">
 	#section {
-		float: left;
-		width: 100%;
-		height: 50%;
-		background-color: #eeeeee;
-		width: 50%;
-		margin-top: 20px;
-		margin-bottom: 20px;
+		width: 98%;
+		margin: 1%;
 		border: solid black 2px;
-		padding: 50px;
+
 		background-color: white;
 		text-align: center;
 		font: bold Arial, Helvetica, sans-serif;
 		font-weight: bold;
-		height: 500px;
-		margin-left: 25%;
+		height: 312px;
+
 	}
-	.ville {
-		
-		width: 20%;
-		float: left;
-		border: solid #bbbbbb 1px;
-		padding: 5px;
-		
-	}
-	
+
+
 	img {
+
+		float: left;
+		height: 300px;
+		width: 30%;
+		margin-left: 5px;
+		margin-top: 5px;
+
+	}
+
+
+	.recapanier {
 		width: 60%;
-		float:left;
-		height: 100%;
+		float: left;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	.supprimepanier {
+		border: none;
+		padding: 6px 0 6px 0;
+		border-radius: 3px;
+		background: #EA7B00;
+		font: bold 13px Arial;
+		color: white;
+		width: 150px;
+		margin: auto;
+	}
+
+	a {
+		color: white;
 	}
 
 	
-	.recap{
-		width: 25%;
-		float: right;
-		margin-top: 0px;
+
+	.total {
+		background-color: #eeeeee;
+	}
+
+	.payer{
+		
+		border: none;
+		padding: 6px 0 6px 0;
+		border-radius: 3px;
+		background: #EA7B00;
+		font: bold 13px Arial;
+		color: white;
+		text-align: center;
+		width: 45px;
+		margin-left:395px;
+		height: 27px;
+		
+	}
+
+	.prix{
+		
+		margin-left: 50px;
+		font-weight: bold;
+		width: 100%;
+		font: bold 20px Arial;
+		font-style: italic;
+		
+	}
+
+	.alignement p{
+		float:left;
+	}
+	.alignement a{
+		position : absolute;
+		left:400px;
+
+	}
 </style>

@@ -8,7 +8,7 @@ $id = $_GET['myid'];
 <html>
 <head>
 	<meta charset="utf-8">
-	<title> Galerie de Villes </title>
+	<title> Produits</title>
 </head>
 <body>
 	<div id="page">
