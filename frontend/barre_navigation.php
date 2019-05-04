@@ -32,7 +32,7 @@
             </ul>
           </div>
         </li>
-        <li><a href="#">Ventes flash</a></li>
+        <li><a href="vente_flash.php">Ventes flash</a></li>
         <li><a href="vendre.php">Vendre</a></li>
         <li><a href="compte.php">Votre compte</a></li>
         <li><a href="#">Admin</a></li>
@@ -47,7 +47,7 @@
           }
           else{
             echo "<li><a href='formulaire_connexion.php'>Connexion</a></li>";
-            $_SESSION['url'] = "../frontend/page_principale.php";
+            $_SESSION['url2'] = "../frontend/page_principale.php";
           }
         ?>
       </ul>
