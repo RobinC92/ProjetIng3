@@ -11,12 +11,17 @@ $connexion = 0;
 if ($db_found) {
     $sql = "SELECT * FROM individu";
     $result = mysqli_query($db_handle, $sql);
+    session_start();
+    $_SESSION['flags'] = true;
+
+
     while ($db_field = mysqli_fetch_assoc($result)) {
 
         if ($db_field['Pseudo'] == $pseudo && $db_field['Mdp'] == $mdp)   {
             $connexion = 1;
-            session_start();
+            
             $_SESSION['flag'] = true;
+            $_SESSION['flags'] = false;
             $_SESSION['nom'] = $db_field['Nom'];
             $_SESSION['prenom'] = $db_field['Prenom'];
             $_SESSION['pseudo'] = $db_field['Pseudo'];
@@ -43,8 +48,9 @@ if ($db_found) {
     if ($connexion == 1) {
         header("Location: {$_SESSION['url']}");
         exit();
-    } else {
-        echo "Mauvais identifiants";
+    } else {  
+        header("Location: {$_SERVER['HTTP_REFERER']}");
+        exit();
     }
 }
 ?>

@@ -39,7 +39,15 @@
         <?php
           session_start();
           if(isset($_SESSION['flag'])) {
+            if ($_SESSION['statut']=="vendeur")
+            {
+              echo "<li><a href='produit_vendeur.php'>Vos Produits</a></li>";
+            }
             echo "<li><a href='destroy_session.php'>Déconnexion</a></li>";
+          }
+          else{
+            echo "<li><a href='formulaire_connexion.php'>Connexion</a></li>";
+            $_SESSION['url'] = "../frontend/page_principale.php";
           }
         ?>
       </ul>
