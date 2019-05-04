@@ -21,16 +21,23 @@ function affichageProduit($produits)
 {
     echo "
         <div id='section'>
-        <div class='ville'>
+      
+        
             <a href='produit.php?myid=" . $produits->id . "'><img src='" . "../backend/" . $produits->photo . "'height='250'></a>
             <div class='recapanier'>
             <h2>" . $produits->nom . "</h2>
-            <p>" . $produits->prix . "</p>
-            <p>" . $produits->categorie . "</p>
-            <p>" . $produits->description . "</p>
+            <p> Prix: " . $produits->prix . " €</p>
+            <p> Catégorie : " . $produits->categorie . "</p>
+            <div class 'descriptionlongue'>
+            <p> Description du produit : <br>" . $produits->description . "</p>
+            </div>
+            <div class='supprimepanier'>
             <center><a href='../backend/supprimerDuPanier.php?myid=" . $produits->id . "'>Supprimer du Panier</a></center>
             </div>
-        </div> </div>";
+            </div>
+        </div> 
+     
+        ";
 }
 
 function affichageDescription($produits)
@@ -50,4 +57,3 @@ function affichageDescription($produits)
         </div>";
 }
 ?>
-
