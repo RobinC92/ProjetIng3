@@ -42,6 +42,6 @@
         WHERE Pseudo LIKE '%$pseudo%'";
         $result = mysqli_query($db_handle, $sql);
     }
-    header("Location: {$_SERVER['HTTP_REFERER']}");
+    header("Location: ../frontend/page_principale.php");
     exit();
 ?>
