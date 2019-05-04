@@ -3,8 +3,6 @@
 	require '../backend/recuperation_produit.php';
 	require 'affichage_produits.php';
 	require '../backend/panier.php';
-
-	require_once('barre_navigation.php');
 ?>
 
 <!DOCTYPE html>
@@ -14,12 +12,13 @@
 	<title> Galerie de Villes </title>
 </head>
 <body>
+	<div id="page">
+	<?php require_once('barre_navigation.php'); ?>
 	<p>Votre total a payer est de 
 	<?php
 		echo totalAPayer(); 
 	?></p>
 	<a href="formulaire_coordonnees_bancaires">Payer</a>
-	<div id="page">
 		<div id="content">
 			<div id="section">
 				<?php
