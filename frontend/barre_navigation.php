@@ -34,7 +34,7 @@
         </li>
         <li><a href="#">Ventes flash</a></li>
         <li><a href="vendre.php">Vendre</a></li>
-        <li><a href="#">Votre compte</a></li>
+        <li><a href="compte.php">Votre compte</a></li>
         <li><a href="#">Admin</a></li>
         <?php
           session_start();
