@@ -35,11 +35,17 @@
         <li><a href="#">Ventes flash</a></li>
         <li><a href="vendre.php">Vendre</a></li>
         <li><a href="#">Votre compte</a></li>
-        <li><a href="#">admin</a></li>
+        <li><a href="#">Admin</a></li>
+        <?php
+          session_start();
+          if(isset($_SESSION['flag'])) {
+            echo "<li><a href='destroy_session.php'>Déconnexion</a></li>";
+          }
+        ?>
       </ul>
       <form class="navbar-form navbar-right inline-form">
         <div class="form-group">
-          <a class="btn btn-warning"><span class="glyphicon  glyphicon-shopping-cart"></span> Panier</a>
+          <a class="btn btn-warning" href="panier.php"><span class="glyphicon  glyphicon-shopping-cart"></span> Panier</a>
         </div>
       </form>
     </div>

@@ -4,7 +4,6 @@
 	require 'affichage_produits.php';
 	require '../backend/panier.php';
 	
-	session_start();
 	require_once('page_principale.php');
 
 	$categorie = $_GET['categorie'];
