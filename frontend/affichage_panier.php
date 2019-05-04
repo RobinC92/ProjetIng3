@@ -3,6 +3,8 @@
 	require '../backend/recuperation_produit.php';
 	require 'affichage_produits.php';
 	require '../backend/panier.php';
+
+	require_once('page_principale.php');
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +16,6 @@
 <body>
 	<p>Votre total a payer est de 
 	<?php
-		session_start();
 		echo totalAPayer(); 
 	?></p>
 	<a href="../backend/validation_commande.php">Payer</a>

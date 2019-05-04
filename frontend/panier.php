@@ -2,9 +2,9 @@
 session_start();
 if(!isset($_SESSION['flag'])) {
     header('Location: formulaire_connexion.php');
-    $_SESSION['url'] = "../frontend/vendre.php";
+    $_SESSION['url'] = "../frontend/panier.php";
 }
 else {
-    header('Location: formulaire_ajout_produit.php');
+    header('Location: affichage_panier.php');
 }
 ?>

@@ -33,8 +33,6 @@ require_once('page_principale.php');
 </body>
 </html>
 -->
-
-
 <!DOCTYPE html>
 <html>
 
@@ -50,7 +48,7 @@ require_once('page_principale.php');
 	
 		<div class="form-style-2-heading">Connexion à votre compte</div>
 		<br><br><br>
-		<form action="../backend/verification_connexion" method="post">
+		<form action="../backend/verification_connexion.php" method="post">
 		<label for="field1"><span>Pseudo <span class="required">*</span></span><input required="true" type="text" class="input-field" name="pseudo" value="" /></label>
 		<label for="field2"><span>Mot de Passe <span class="required">*</span></span><input required="true" type="password" class="input-field" name="mdp" value="" /></label>
 			

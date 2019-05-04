@@ -36,21 +36,13 @@ if ($db_found) {
             $_SESSION['code_securite'] = $db_field['Code_securite'];
             $_SESSION['panier'] = unserialize($db_field['Panier']);
             $_SESSION['solde'] = ($db_field['Solde']);
-
-            //$_SESSION['solde'] = $db_field['Solde'];
             echo "Vous êtes connecté";
-
-            //ajouterAuPanier(1);
-            //supprimerDuPanier(1);
-            //echo totalAPayer();
         }
     }
 
     if ($connexion == 1) {
-        header("Location: ../frontend/affichage_panier.php");
+        header("Location: {$_SESSION['url']}");
         exit();
-        // header('Location: ventes_flash.php');
-        // exit();
     } else {
         echo "Mauvais identifiants";
     }
