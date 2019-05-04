@@ -2,29 +2,7 @@
 	require '../backend/includes/connect_db.php';
 	require '../backend/recuperation_produit.php';
 	require 'affichage_produits.php';
-	require '../backend/panier.php';
-
-	$categorie = $_GET['categorie'];
-	$produits = tableauDobjetCategorie($categorie);	
-	if ($categorie=="livres")
-	{
-		$affichage = "Livres";
-	}
-
-	if ($categorie=="musiques")
-	{
-		$affichage = "Musiques";
-	}
-
-	if ($categorie=="sport")
-	{
-		$affichage = "Sports et Loisir";
-	}
-
-	if ($categorie=="vetements")
-	{
-		$affichage = "Vetements";
-	}
+	require '../backend/panier.php';	
 ?>
 
 <!DOCTYPE html>
@@ -36,10 +14,14 @@
 </head>
 <body>
 	<div id="page">
-	<?php require_once('barre_navigation.php');?>
+    <?php 
+        require_once('barre_navigation.php');
+        $pseudo = $_SESSION['pseudo'];
+        $produits = tableauDobjetPseudo($pseudo);
+    ?>
 		<div id="content">
 			<?php 
-				echo "<div class='form-style-2-heading'> Catégorie : ".$affichage."</div>"
+				echo "<center><div class='form-style-2-heading'> Vos produits</div><center>"
 			?>
 			<div id="section">
 				<?php

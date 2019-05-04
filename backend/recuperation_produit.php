@@ -30,6 +30,23 @@
         return $produits;
     }
 
+    function tableauDobjetPseudo($pseudo)
+    {
+        require 'includes/connect_db.php';
+        if($db_found) {
+            $sql = "SELECT * FROM produit WHERE Pseudo ='".$pseudo."'";    
+            $result = mysqli_query($db_handle, $sql);
+            $produits=array();
+            while ($data = mysqli_fetch_assoc($result)) {
+                array_push($produits,produitEnObjet($data['ID'], $data['Nom'], $data['Prix'],
+                $data['Description'], $data['Categorie'], $data['Photo'], $data['Pseudo'], $data['Ventes']));
+            }
+        } else {
+            echo "Database not found";
+        }
+        return $produits;
+    }
+
     function objetParId($id)
     {
         require 'includes/connect_db.php';
