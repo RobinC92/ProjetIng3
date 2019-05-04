@@ -15,7 +15,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title> Galerie de Villes </title>
+	<title> Boutique </title>
+	<link rel='stylesheet' type='text/css' media='screen' href='formulaire.css'>
 </head>
 <body>
 
@@ -36,12 +37,38 @@
 		background-color: #eeeeee;
 	}
 	.ville {
-		width: 20%;
+		width: 18%;
 		float: left;
-		border: solid #bbbbbb 1px;
+		border: solid #bbbbbb 2px;
 		padding: 5px;
+		background-color: white;
+		text-align: center;
+		font: bold Arial, Helvetica, sans-serif;
+		font-weight: bold;
 	}
 	img {
 		width: 100%;
 	}
+
+	.ajoutpanier{
+		
+	border:none;
+	padding:6px 0 6px 0;
+	border-radius:3px;
+	background:#EA7B00;
+	font:bold 13px Arial;
+	color:white;
+	width: 150px;
+	margin: auto;
+
+	}
+
+	a{
+		color :white;
+		
+	}
+		
+		
+	
 </style>
+

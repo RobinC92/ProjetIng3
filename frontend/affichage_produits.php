@@ -7,10 +7,11 @@
             <div class='ville'>
                 <a href='produit.php?myid=".$produits[$i]->id."'><img src='"."../backend/".$produits[$i]->photo."'height='250'></a>
                 <h2>".$produits[$i]->nom."</h2>
-                <p>".$produits[$i]->prix."</p>
-                <p>".$produits[$i]->categorie."</p>
-                <p>".$produits[$i]->description."</p>
-                <center><a href='../backend/ajoutAuPanier.php?myid=".$produits[$i]->id."'>Ajouter au Panier</a></center>
+                <p> Prix : ".$produits[$i]->prix." €</p>
+                
+                <div class='ajoutpanier'>
+                <center><a  href='../backend/ajoutAuPanier.php?myid=".$produits[$i]->id."'>Ajouter au Panier</a></center>
+                </div>
             </div>";
         }
     }
@@ -27,3 +28,4 @@
         </div>";
     }
 ?>
+
