@@ -1,8 +1,14 @@
 
 <?php
 function affichageProduits($produits)
-{
+{   
+    
     for ($i = 0; $i < count($produits); $i++) {
+        if (isset($_SESSION['flag'])){
+            $url = "../backend/ajoutAuPanier.php?myid=" . $produits[$i]->id ;
+        }else{
+            $url = "formulaire_connexion.php";
+        }
         echo "
             <div class='ville'>
                 <a href='produit.php?myid=" . $produits[$i]->id . "'> <img src='" . "../backend/" . $produits[$i]->photo . "'height='250'></a>
@@ -10,12 +16,12 @@ function affichageProduits($produits)
                 <p> Prix : " . $produits[$i]->prix . " €</p>
                 
                 <div class='ajoutpanier'>
-                <center><a  href='../backend/ajoutAuPanier.php?myid=" . $produits[$i]->id . "'>Ajouter au Panier</a></center>
+                <center><a  href='".$url."'>Ajouter au Panier</a></center>
                 </div>
             </div>";
     }
 }
-
+    
 function affichageProduit($produits)
 {
     echo "
@@ -41,6 +47,11 @@ function affichageProduit($produits)
 
 function affichageDescription($produits)
 {
+    if (isset($_SESSION['flag'])){
+        $url = "../backend/ajoutAuPanier.php?myid=" . $produits[$i]->id ;
+    }else{
+        $url = "formulaire_connexion.php";
+    }
     echo "
         <div class='description'>
             <a href='produit.php?myid=" . $produits->id . "'><img src='" . "../backend/" . $produits->photo . "'height='250'></a>
@@ -50,7 +61,7 @@ function affichageDescription($produits)
             <p> Catégorie : " . $produits->categorie . "</p>
             <p> Description du produit :<br> " . $produits->description . "</p>
             <div class='ajoutpanier'>
-            <center><a  href='../backend/ajoutAuPanier.php?myid=" . $produits->id . "'>Ajouter au Panier</a></center>
+            <center><a  href='".$url."'>Ajouter au Panier</a></center>
             </div>
             </div>
         </div>";
