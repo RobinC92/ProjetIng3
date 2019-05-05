@@ -10,7 +10,7 @@ require '../backend/panier.php';
 
 <head>
 	<meta charset="utf-8">
-	<title> Panier </title>
+	
 </head>
 
 <body>

@@ -30,7 +30,7 @@
 	<!-- Page 1 -->
 	<div class="item active">  
 	<div class="carousel-page">
-	<img src="img/livres5.jpg" class="img-responsive" style="margin:0px auto;" />
+	<img src="img/livres5.jpg" class="img-responsive img-rounded" style="margin:0px auto;" />
 	</div> 
 	<div class="carousel-caption">Livres</div>
 	</div>   
@@ -83,7 +83,9 @@
 
 <script type="text/javascript">
   
-  
+  $('.carousel-indicators').carousel({
+  interval: 2000
+})
 
 </script>
 
@@ -118,4 +120,6 @@
         width:100%;
         height: 100%;
     }
+
+	
 </style>
