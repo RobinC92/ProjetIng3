@@ -74,10 +74,6 @@
 					<span class="glyphicon glyphicon-chevron-right"></span>
 				</a>
 			</div>
-
-
-
-
 		</div>
 
 		<div id=footer>
@@ -117,7 +113,7 @@
 
 	.carousel-page {
 		width: 100%;
-		height: 500px;
+		height: 650px;
 		background-color: #5f666d;
 		color: white;
 	}
@@ -126,8 +122,6 @@
 	.item img {
 		height: 100%;
 		width: 100%;
-
-
 	}
 
 	.carousel-indicators {
