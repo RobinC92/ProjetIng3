@@ -54,7 +54,7 @@
       </ul>
       <form class="navbar-form navbar-right inline-form">
         <div class="form-group">
-          <a class="btn btn-warning" href="panier.php"><span class="glyphicon  glyphicon-shopping-cart"></span> Panier <?php if (isset($_SESSION['flag'])){echo count($_SESSION['panier']);}?></a>
+          <a class="btn btn-warning" href="panier.php"><span class="glyphicon  glyphicon-shopping-cart"></span> Panier <?php if (isset($_SESSION['flag'])){echo "(".count($_SESSION['panier']).")";}?></a>
         </div>
       </form>
     </div>
