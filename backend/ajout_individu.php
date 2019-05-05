@@ -14,6 +14,7 @@
     $code_postal = isset($_POST["code_postal"])? $_POST["code_postal"] : "";
     $pays = isset($_POST["pays"])? $_POST["pays"] : "";
     $telephone = isset($_POST["telephone"])? $_POST["telephone"] : "";
+    $panier = serialize(array());
 
     if ($_POST["button"]) {
         if ($db_found) {
@@ -27,12 +28,16 @@
             $test = mysqli_num_rows($result);
             if ($test < 1) {
     // le pseudo n'existe pas dans la BDD
-                $sql = "INSERT INTO individu VALUES('$nom', '$prenom', '$pseudo', '$statut', '$email', '$mdp', '$adresse','$ville','$code_postal','$pays','$telephone','$photo',0,0,0,0,0,0,0)";
+                $sql = "INSERT INTO individu VALUES('$nom', '$prenom', '$pseudo', '$statut', '$email', '$mdp', '$adresse','$ville','$code_postal','$pays','$telephone','$photo',0,0,0,0,0,'$panier',0)";
                 $result = mysqli_query($db_handle, $sql);
-                echo "Compte crée avec succès" . "<br>";
+                header("Location: ../frontend/formulaire_connexion.php");
+
             }else{
-    // le pseudo existe déjà dans la BDD
-                echo "Pseudo déjà pris";
+            // le pseudo existe déjà dans la BDD
+            session_start();
+            $_SESSION['flagpseudo'] = true;
+            header("Location: {$_SERVER['HTTP_REFERER']}");
+            exit();
             }
         }
     }   

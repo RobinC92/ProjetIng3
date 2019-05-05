@@ -21,7 +21,7 @@
     ?>
 		<div id="content">
 			<?php 
-				echo "<center><div class='form-style-2-heading'> Vos produits</div><center>"
+				echo "<center><div class='form-style-2-heading'>Vos produits</div><center>"
 			?>
 			<div id="section">
 				<?php
