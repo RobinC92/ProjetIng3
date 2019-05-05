@@ -7,7 +7,6 @@
     $pseudo = $_SESSION['pseudo'];
     $tab = array();
     unset($_SESSION['panier'][array_search($id, $_SESSION['panier'])]);
-    echo count($_SESSION['panier']);
     foreach  ($_SESSION['panier'] as $valeur){
         array_push($tab,$valeur);
     }
