@@ -39,7 +39,7 @@
         <?php
           session_start();
           if(isset($_SESSION['flag'])) {
-            if ($_SESSION['statut']=="vendeur")
+            if ($_SESSION['statut']=="vendeur" || $_SESSION['statut']=="admin" )
             {
               echo "<li><a href='produit_vendeur.php'>Vos Produits</a></li>";
             }
@@ -48,6 +48,7 @@
           }
           else{
             echo "<li><a href='formulaire_connexion.php'>Connexion</a></li>";
+            echo "<li><a href='formulaire_inscription.php'>Créer un compte</a></li>";
             $_SESSION['url2'] = "../frontend/page_principale.php";
           }
         ?>

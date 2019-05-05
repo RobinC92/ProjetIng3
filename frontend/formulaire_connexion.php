@@ -31,7 +31,7 @@
 					
 					<br>
 					
-					<label><span> </span><input type="submit" name="button" value="Valider" /></label>	
+					<label><span></span><input type="submit" name="button" value="Valider" /></label>
 				</form>
 			</div>
 		</div>
