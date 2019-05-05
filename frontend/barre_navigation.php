@@ -45,6 +45,7 @@
             }
             echo "<li><a href='destroy_session.php'>Déconnexion</a></li>";
             echo "<li><p id='pseudo'> Connecté en tant que : ".$_SESSION['pseudo']."</p></li>";
+           /* echo "<li><p id='photo" .$_SESSION['photo']."<p/></li>";*/
           }
           else{
             echo "<li><a href='formulaire_connexion.php'>Connexion</a></li>";
