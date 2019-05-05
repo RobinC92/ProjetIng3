@@ -4,7 +4,8 @@ require 'includes/connect_db.php';
 
 if ($_POST["button"]){
 		if($db_found) {
-		$sql = "SELECT * FROM individu ";    
+		$statut = "vendeur";
+		$sql = "SELECT * FROM individu WHERE Statut LIKE '%$statut%'";    
 		$result = mysqli_query($db_handle, $sql);
 		while ($data = mysqli_fetch_assoc($result)) {
 			echo "Nom: " . $data['Nom'] . '<br>';

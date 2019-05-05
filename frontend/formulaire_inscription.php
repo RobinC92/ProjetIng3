@@ -28,11 +28,11 @@
 				}				
 			?>
 			<label for="field2"><span>Pseudo <span class="required">*</span></span><input required="true" type="text" class="input-field" name="pseudo" value="" /></label>
-			<label for="field4"><span>Statut</span><select name="Statut" id="classe" class="select-field">
+			<label for="field4"><span>Statut</span><select name="statut" id="classe" class="select-field">
 					<option value="acheteur">Acheteur</option>
 					<option value="vendeur">Vendeur</option>
 				</select></label>
-			<label for="field2"><span>Email <span class="required">*</span></span><input required="true" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="input-field" name="mail" value="" /></label>	
+			<label for="field2"><span>Email <span class="required">*</span></span><input required="true" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="input-field" name="email" value="" /></label>	
 			<label for="field2"><span>Mot de passe <span class="required">*</span></span><input required="true" type="password" class="input-field" name="mdp" value="" /></label>
 			<label for="field2"><span>Adresse <span class="required">*</span></span><input required="true" type="text" class="input-field" name="adresse" value="" /></label>
 			<label for="field2"><span>Ville <span class="required">*</span></span><input required="true" type="text" class="input-field" name="ville" value="" /></label>

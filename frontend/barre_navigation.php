@@ -35,7 +35,7 @@
         <li><a href="vente_flash.php">Ventes flash</a></li>
         <li><a href="vendre.php">Vendre</a></li>
         <li><a href="compte.php">Votre compte</a></li>
-        <li><a href="#">Admin</a></li>
+        <li><a href="admin.php">Admin</a></li>
         <?php
           session_start();
           if(isset($_SESSION['flag'])) {
