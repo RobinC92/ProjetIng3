@@ -48,7 +48,7 @@ function affichageProduit($produits)
 function affichageDescription($produits)
 {
     if (isset($_SESSION['flag'])){
-        $url = "../backend/ajoutAuPanier.php?myid=" . $produits[$i]->id ;
+        $url = "../backend/ajoutAuPanier.php?myid=" . $produits->id ;
     }else{
         $url = "formulaire_connexion.php";
     }
