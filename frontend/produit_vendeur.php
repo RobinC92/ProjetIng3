@@ -25,7 +25,7 @@
 			?>
 			<div id="section">
 				<?php
-					affichageProduits($produits);
+					affichageVosProduits($produits);
 				?>
 			</div>
 		</div>

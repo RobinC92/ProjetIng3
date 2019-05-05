@@ -10,7 +10,6 @@
         $result = mysqli_query($db_handle, $sql);
         $data = mysqli_fetch_assoc($result);
         if($data['Panier'] == NULL){
-            echo "Option 1 <br>";
             $_SESSION['panier'] = array($id);
             $envoyer = serialize($_SESSION['panier']);
             $sql = "UPDATE individu

@@ -17,17 +17,14 @@
 	<?php require_once('barre_navigation.php');?>
 		<div id="content">
             <?php 
-                $intermediaire;
-                $produits = tableauDobjetCategorie("livres");
-                for ($i=0; $i < count($produits); $i++){
-                    for ($j=0; $j < count($produits)-1; $j++){
-                        if ($produits[$j]->ventes < $produits[$j+1]->ventes){
-                            $intermediaire = $produits[$j]->ventes;
-                            $produits[$j]->ventes = $produits[$j+1]->ventes;
-                            $produits[$j+1]->ventes = $intermediaire;
-                        }
-                    }
-                }
+				$produits = tableauDobjetCategorie("livres");
+				$intermediaire =array();
+				if (count($produits) > 6) {
+					for ($i = 0; $i < 6; $i++){
+						array_push($intermediaire,$produits[$i]);
+					}
+					$produits = $intermediaire;
+				}
 				echo "<center><div class='form-style-2-heading'> Nos livres les plus vendus </div></center>"
 			?>
 			<div id="section">
@@ -37,16 +34,14 @@
 			</div>
 
             <?php 
-                $produits = tableauDobjetCategorie("musiques");	
-                for ($i=0; $i < count($produits); $i++){
-                    for ($j=0; $j < count($produits)-1; $j++){
-                        if ($produits[$j]->ventes < $produits[$j+1]->ventes){
-                            $intermediaire = $produits[$j]->ventes;
-                            $produits[$j]->ventes = $produits[$j+1]->ventes;
-                            $produits[$j+1]->ventes = $intermediaire;
-                        }
-                    }
-                }
+				$produits = tableauDobjetCategorie("musiques");
+				$intermediaire =array();
+				if (count($produits) > 6) {
+					for ($i = 0; $i < 6; $i++){
+						array_push($intermediaire,$produits[$i]);
+					}
+					$produits = $intermediaire;
+				}
 				echo "<center><div class='form-style-2-heading'> Nos Musiques les plus vendus </div></center>"
 			?>
 			<div id="section">
@@ -56,16 +51,14 @@
 			</div>
 
             <?php 
-                $produits = tableauDobjetCategorie("vetements");
-                for ($i=0; $i < count($produits); $i++){
-                    for ($j=0; $j < count($produits)-1; $j++){
-                        if ($produits[$j]->ventes < $produits[$j+1]->ventes){
-                            $intermediaire = $produits[$j]->ventes;
-                            $produits[$j]->ventes = $produits[$j+1]->ventes;
-                            $produits[$j+1]->ventes = $intermediaire;
-                        }
-                    }
-                }
+				$produits = tableauDobjetCategorie("vetements");
+				$intermediaire =array();
+				if (count($produits) > 6) {
+					for ($i = 0; $i < 6; $i++){
+						array_push($intermediaire,$produits[$i]);
+					}
+					$produits = $intermediaire;
+				}
 				echo "<center><div class='form-style-2-heading'> Nos Vêtements les plus vendus </div></center>"
 			?>
 			<div id="section">
@@ -75,16 +68,14 @@
 			</div>
 
             <?php 
-                $produits = tableauDobjetCategorie("sport");
-                for ($i=0; $i < count($produits); $i++){
-                    for ($j=0; $j < count($produits)-1; $j++){
-                        if ($produits[$j]->ventes < $produits[$j+1]->ventes){
-                            $intermediaire = $produits[$j]->ventes;
-                            $produits[$j]->ventes = $produits[$j+1]->ventes;
-                            $produits[$j+1]->ventes = $intermediaire;
-                        }
-                    }
-                }
+				$produits = tableauDobjetCategorie("sport");
+				$intermediaire =array();
+				if (count($produits) > 6) {
+					for ($i = 0; $i < 6; $i++){
+						array_push($intermediaire,$produits[$i]);
+					}
+					$produits = $intermediaire;
+				}
 				echo "<center><div class='form-style-2-heading'> Nos meilleures ventes en Sport et Loisirs </div></center>"
 			?>
 			<div id="section">
