@@ -6,7 +6,13 @@ if(!isset($_SESSION['flag'])) {
     exit();
 }
 else {
-    header('Location: formulaire_ajout_produit.php');
-    exit();
+    if($_SESSION['statut'] == "vendeur" || $_SESSION['statut'] == "admin"){
+        header('Location: formulaire_ajout_produit.php');
+        exit();
+    }
+    else {
+        header("Location: {$_SERVER['HTTP_REFERER']}");
+        exit();
+    }
 }
 ?>
