@@ -22,31 +22,40 @@
 	<ol class="carousel-indicators">
 	<li data-target="#my_carousel" data-slide-to="0" class="active"></li>
 	<li data-target="#my_carousel" data-slide-to="1"></li>
-	<li data-target="#my_carousel" data-slide-to="2"></li>
+    <li data-target="#my_carousel" data-slide-to="2"></li>
+    <li data-target="#my_carousel" data-slide-to="3"></li>
 	</ol>
 	<!-- Slides -->
 	<div class="carousel-inner">
 	<!-- Page 1 -->
 	<div class="item active">  
 	<div class="carousel-page">
-	<img src="/images/bootstrap.png" class="img-responsive" style="margin:0px auto;" />
+	<img src="img/livres5.jpg" class="img-responsive" style="margin:0px auto;" />
 	</div> 
-	<div class="carousel-caption">Page 1 de présentation</div>
+	<div class="carousel-caption">Livres</div>
 	</div>   
 	<!-- Page 2 -->
 	<div class="item"> 
-	<div class="carousel-page"><img src="/images/twitter-bootstrap.jpg" class="img-responsive img-rounded" 
+	<div class="carousel-page"><img src="img/vetements1.jpg" class="img-responsive img-rounded" 
 	style="margin:0px auto;"  /></div> 
-	<div class="carousel-caption">Page 2 de présentation</div>
+	<div class="carousel-caption">Vêtements</div>
 	</div>  
 	<!-- Page 3 -->
 	<div class="item">  
 	<div class="carousel-page">
-	<img src="/images/tablette.png" class="img-responsive img-rounded" 
+	<img src="img/musiques1.jpg" class="img-responsive img-rounded" 
 	style="margin:0px auto;max-height:100%;"  />
 	</div>  
-	<div class="carousel-caption">Page 2 de présentation</div>
-	</div>     
+	<div class="carousel-caption">Musiques</div>
+    </div>    
+    
+    <!-- Page 4 -->
+	<div class="item"> 
+	<div class="carousel-page"><img src="img/sports5.jpg" class="img-responsive img-rounded" 
+	style="margin:0px auto;"  /></div> 
+	<div class="carousel-caption">Sports et Loisir</div>
+    </div>  
+    
 	</div>
 	<!-- Contrôles -->
 	<a class="left carousel-control" href="#my_carousel" data-slide="prev">
@@ -99,9 +108,14 @@
     .carousel-page
 	{
 	width:100%;
-	height:400px;
+	height:500px;
 	background-color:#5f666d;
 	color:white;
-	}
+    }
     
+    .carousel-page img{
+
+        width:100%;
+        height: 100%;
+    }
 </style>
