@@ -9,6 +9,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+
+  
+
+  
+	
 </head>
 
 <body>
@@ -45,10 +50,11 @@
             }
             echo "<li><a href='destroy_session.php'>Déconnexion</a></li>";
             echo "<li><p id='pseudo'> Connecté en tant que : ".$_SESSION['pseudo']."</p></li>";
+            echo " <div class='pic'><img class='rounded-circle' src='"."../backend/".$_SESSION['photo']."'  > </div>";
           }
           else{
-            echo "<li><a href='formulaire_connexion.php'>Connexion</a></li>";
-            echo "<li><a href='formulaire_inscription.php'>Créer un compte</a></li>";
+            echo "<li><a href='formulaire_connexion.php'>Connexion</a></li> ";
+            echo " <li><a href='formulaire_inscription.php'>Créer un compte</a></li>";
             $_SESSION['url2'] = "../frontend/page_principale.php";
           }
         ?>
@@ -87,6 +93,23 @@
     padding: 0;
   }
 
+  .pic img{
+    position:1200px ;
+    position: absolute;
+    width: 10%x;
+    height:40px;
+   margin-top:4px;
+   padding-left:10px;
+   margin-left:10px;
+   
+   
+  }
+
+  .rounded-circle {
+  border-radius: 50% ;
+  width: 5%;
+height: 10%;
+}
 </style>
 
 <script>
