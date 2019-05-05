@@ -1,5 +1,13 @@
 # ProjetIng3
 
+# Faire fonctionner notre projet sur votre ordinateur
+
+Pour faire fonctionner notre projet en local avec wamp ou mamp vous devrez suivre plusieurs étapes.
+-Deplace l'intégralité du dossier ProjetIng3 dans votre dossier WWW pour wamp et htdocs sur mamp
+-Aller dans phpmyadmin et créer une base de donné nommé amazon
+-Importer dans cette base le fichier SQL contenu dans ProjetIng3
+-Lancer la page_principale du site et laisser vous guider.
+
 Here we have the principal folder of the Ing 3 project from Julien Rauber, Hugo Desgouillon and Robin Canaguier.
 
 # <a name="workflow"></a> Workflow
