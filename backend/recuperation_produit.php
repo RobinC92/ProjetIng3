@@ -17,7 +17,7 @@
     {
         require 'includes/connect_db.php';
         if($db_found) {
-            $sql = "SELECT * FROM produit WHERE Categorie ='".$cate."'";    
+            $sql = "SELECT * FROM produit WHERE Categorie ='".$cate."' ORDER BY Ventes DESC";    
             $result = mysqli_query($db_handle, $sql);
             $produits=array();
             while ($data = mysqli_fetch_assoc($result)) {

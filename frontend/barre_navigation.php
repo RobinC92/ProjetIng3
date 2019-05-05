@@ -44,6 +44,7 @@
               echo "<li><a href='produit_vendeur.php'>Vos Produits</a></li>";
             }
             echo "<li><a href='destroy_session.php'>Déconnexion</a></li>";
+            echo "<li><p id='pseudo'>".$_SESSION['pseudo']."</p></li>";
           }
           else{
             echo "<li><a href='formulaire_connexion.php'>Connexion</a></li>";
@@ -53,7 +54,7 @@
       </ul>
       <form class="navbar-form navbar-right inline-form">
         <div class="form-group">
-          <a class="btn btn-warning" href="panier.php"><span class="glyphicon  glyphicon-shopping-cart"></span> Panier</a>
+          <a class="btn btn-warning" href="panier.php"><span class="glyphicon  glyphicon-shopping-cart"></span> Panier <?php if (isset($_SESSION['flag'])){echo count($_SESSION['panier']);}?></a>
         </div>
       </form>
     </div>
@@ -64,6 +65,11 @@
 </html>
 
 <style type="text/css">
+  #pseudo {
+    padding-top: 14px;
+    padding-left: 50px;
+    float:right;
+  }
   .dropdown {
     margin-top: 8px;
   }

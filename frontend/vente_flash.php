@@ -19,15 +19,6 @@
             <?php 
                 $intermediaire;
                 $produits = tableauDobjetCategorie("livres");
-                for ($i=0; $i < count($produits); $i++){
-                    for ($j=0; $j < count($produits)-1; $j++){
-                        if ($produits[$j]->ventes < $produits[$j+1]->ventes){
-                            $intermediaire = $produits[$j]->ventes;
-                            $produits[$j]->ventes = $produits[$j+1]->ventes;
-                            $produits[$j+1]->ventes = $intermediaire;
-                        }
-                    }
-                }
 				echo "<center><div class='form-style-2-heading'> Nos livres les plus vendus </div></center>"
 			?>
 			<div id="section">
@@ -38,15 +29,6 @@
 
             <?php 
                 $produits = tableauDobjetCategorie("musiques");	
-                for ($i=0; $i < count($produits); $i++){
-                    for ($j=0; $j < count($produits)-1; $j++){
-                        if ($produits[$j]->ventes < $produits[$j+1]->ventes){
-                            $intermediaire = $produits[$j]->ventes;
-                            $produits[$j]->ventes = $produits[$j+1]->ventes;
-                            $produits[$j+1]->ventes = $intermediaire;
-                        }
-                    }
-                }
 				echo "<center><div class='form-style-2-heading'> Nos Musiques les plus vendus </div></center>"
 			?>
 			<div id="section">
@@ -57,15 +39,6 @@
 
             <?php 
                 $produits = tableauDobjetCategorie("vetements");
-                for ($i=0; $i < count($produits); $i++){
-                    for ($j=0; $j < count($produits)-1; $j++){
-                        if ($produits[$j]->ventes < $produits[$j+1]->ventes){
-                            $intermediaire = $produits[$j]->ventes;
-                            $produits[$j]->ventes = $produits[$j+1]->ventes;
-                            $produits[$j+1]->ventes = $intermediaire;
-                        }
-                    }
-                }
 				echo "<center><div class='form-style-2-heading'> Nos Vêtements les plus vendus </div></center>"
 			?>
 			<div id="section">
@@ -76,15 +49,6 @@
 
             <?php 
                 $produits = tableauDobjetCategorie("sport");
-                for ($i=0; $i < count($produits); $i++){
-                    for ($j=0; $j < count($produits)-1; $j++){
-                        if ($produits[$j]->ventes < $produits[$j+1]->ventes){
-                            $intermediaire = $produits[$j]->ventes;
-                            $produits[$j]->ventes = $produits[$j+1]->ventes;
-                            $produits[$j+1]->ventes = $intermediaire;
-                        }
-                    }
-                }
 				echo "<center><div class='form-style-2-heading'> Nos meilleures ventes en Sport et Loisirs </div></center>"
 			?>
 			<div id="section">
