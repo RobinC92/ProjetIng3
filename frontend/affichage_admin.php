@@ -11,6 +11,7 @@
     <div id='page'>
         <?php require_once('barre_navigation.php'); ?>
         <div id='content'>
+            <center> <?php require_once('../backend/liste_individu.php');?> </center>
         </div>
         <?php require_once('footer.php'); ?>
     </div>
