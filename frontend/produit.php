@@ -17,7 +17,7 @@ $id = $_GET['myid'];
         ?>
 		<div id="content">
 			<?php
-				echo "<div class='form-style-2-heading'>Fiche du produit </div>"
+				echo "<center><div class='form-style-2-heading'>Fiche Produit </div></center>"
 			?>
 
 			<div id="section">

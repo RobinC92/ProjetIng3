@@ -17,7 +17,7 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span> ECE Amazon</a>
+        <a class="navbar-brand" href="page_principale.php"><span class="glyphicon glyphicon-home"></span> ECE Amazon</a>
 
       </div>
       <ul class="nav navbar-nav">
@@ -44,7 +44,7 @@
               echo "<li><a href='produit_vendeur.php'>Vos Produits</a></li>";
             }
             echo "<li><a href='destroy_session.php'>Déconnexion</a></li>";
-            echo "<li><p id='pseudo'>".$_SESSION['pseudo']."</p></li>";
+            echo "<li><p id='pseudo'> Connecté en tant que : ".$_SESSION['pseudo']."</p></li>";
           }
           else{
             echo "<li><a href='formulaire_connexion.php'>Connexion</a></li>";

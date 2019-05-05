@@ -2,7 +2,6 @@
 <?php
 function affichageProduits($produits)
 {
-    //session_start();
     for ($i = 0; $i < count($produits); $i++) {
         echo "
             <div class='ville'>
@@ -55,5 +54,21 @@ function affichageDescription($produits)
             </div>
             </div>
         </div>";
+}
+
+function affichageVosProduits($produits)
+{
+    for ($i = 0; $i < count($produits); $i++) {
+        echo "
+            <div class='ville'>
+                <a href='produit.php?myid=" . $produits[$i]->id . "'> <img src='" . "../backend/" . $produits[$i]->photo . "'height='250'></a>
+                <h2>" . $produits[$i]->nom . "</h2>
+                <p> Prix : " . $produits[$i]->prix . " €</p>
+                
+                <div class='ajoutpanier'>
+                <center><a  href='../backend/supprimer_produit.php?myid=" . $produits[$i]->id . "'>Supprimer de la vente</a></center>
+                </div>
+            </div>";
+    }
 }
 ?>
