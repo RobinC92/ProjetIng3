@@ -11,8 +11,8 @@
     $envoyer = serialize($_SESSION['panier']);
     if ($db_found) {
         $sql = "SELECT * FROM individu ";    
-		$result = mysqli_query($db_handle, $sql);
-		while ($data = mysqli_fetch_assoc($result)) {
+		$result4 = mysqli_query($db_handle, $sql);
+		while ($data = mysqli_fetch_assoc($result4)) {
             $envoyer = unserialize($data['Panier']);
             $pseudo = $data['Pseudo'];
             $tab = array();
